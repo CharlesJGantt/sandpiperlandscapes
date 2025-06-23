@@ -1,0 +1,11 @@
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #B3CB4F;
+  --bs-primary-rgb: 179, 203, 79;
+  --bs-secondary: #846F3E;
+  --bs-secondary-rgb: 132, 111, 62;
+  --bs-tertiary: #484132;
+  --bs-tertiary-rgb: 72, 65, 50;
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #99af49;
+}
