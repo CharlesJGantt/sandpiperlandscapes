@@ -1,6 +1,6 @@
 uuid: 286eb363-7727-4ca8-8061-00e9805f8d2d
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - gin
