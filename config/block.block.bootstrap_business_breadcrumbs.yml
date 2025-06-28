@@ -1,0 +1,22 @@
+uuid: c17b290a-f974-4aba-8050-8e91ae9fd0a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_business
+_core:
+  default_config_hash: MqPGSUMXYdLPR_GahjH4o6rvbFNTX9AWirhkasU4_Pc
+id: bootstrap_business_breadcrumbs
+theme: bootstrap_business
+region: hero_top
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: a7f85f47-9638-462c-81ae-0c29a26d5e8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.front_page_hero_slider
+  module:
+    - link
+id: node.front_page_hero_slider.field_link
+field_name: field_link
+entity_type: node
+bundle: front_page_hero_slider
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

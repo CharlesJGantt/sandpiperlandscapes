@@ -1,0 +1,30 @@
+uuid: 281a5dd2-b230-4108-9458-a120c131a342
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5f5898bf-8897-46a3-8579-ee175622a51c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_business
+id: bootstrap_business_headerimages
+theme: bootstrap_business
+region: banner
+weight: -5
+provider: null
+plugin: 'block_content:5f5898bf-8897-46a3-8579-ee175622a51c'
+settings:
+  id: 'block_content:5f5898bf-8897-46a3-8579-ee175622a51c'
+  label: 'Header Images'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

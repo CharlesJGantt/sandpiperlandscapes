@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 0239150a-52dc-4bed-953c-49657a8fb45a
+name: 'Sandpiper Landscapes'
+mail: santpiperlandscapes@gmail.com
+slogan: 'Locally owned & proudly serving Aiken, County since 2017! '
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

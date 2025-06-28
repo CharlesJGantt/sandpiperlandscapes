@@ -1,0 +1,22 @@
+uuid: 45af9ccb-6992-43e4-8fd4-7543257e4c8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_business
+_core:
+  default_config_hash: maPcb29lif4EihjY-bGntjJCJDQE_XY12ma9g842VzE
+id: bootstrap_business_content
+theme: bootstrap_business
+region: content
+weight: -14
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

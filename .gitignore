@@ -23,4 +23,4 @@
 /.env
 
 # Ignore Private Files
-../Private
+/private

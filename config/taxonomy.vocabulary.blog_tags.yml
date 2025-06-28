@@ -1,0 +1,9 @@
+uuid: c9adca9f-f30a-49ae-b979-cf1876a9e723
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Tags'
+vid: blog_tags
+description: null
+weight: 0
+new_revision: false
