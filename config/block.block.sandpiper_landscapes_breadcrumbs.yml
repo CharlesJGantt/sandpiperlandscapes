@@ -1,0 +1,22 @@
+uuid: cdfae22d-39bd-4cfe-8deb-a167b96eff15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: MqPGSUMXYdLPR_GahjH4o6rvbFNTX9AWirhkasU4_Pc
+id: sandpiper_landscapes_breadcrumbs
+theme: sandpiper_landscapes
+region: hero_top
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

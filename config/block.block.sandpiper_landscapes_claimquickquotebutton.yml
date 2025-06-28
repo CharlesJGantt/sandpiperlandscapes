@@ -1,0 +1,21 @@
+uuid: dc5534b3-2287-4296-9638-bcded91fc5de
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_claimquickquotebutton
+theme: sandpiper_landscapes
+region: header_third
+weight: -6
+provider: null
+plugin: 'block_content:de3d8d35-f61b-4980-8c0d-b1dbb73b847b'
+settings:
+  id: 'block_content:de3d8d35-f61b-4980-8c0d-b1dbb73b847b'
+  label: 'Claim Quick Quote Button'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

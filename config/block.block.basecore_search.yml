@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/shortcodes\r\n/first-post"
     negate: false
     context_mapping: {  }
+    pages: "/shortcodes\r\n/first-post"

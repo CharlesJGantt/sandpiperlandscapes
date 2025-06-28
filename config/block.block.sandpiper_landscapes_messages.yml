@@ -1,0 +1,22 @@
+uuid: a5239cd0-7a8d-4837-bed8-e1c8f07342b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: xDdIodkqxftG78jhHNAtSlRGYExYAAdPKkTOM9_hCK0
+id: sandpiper_landscapes_messages
+theme: sandpiper_landscapes
+region: system_messages
+weight: -16
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

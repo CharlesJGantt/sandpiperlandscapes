@@ -1,0 +1,20 @@
+uuid: ba669cbc-59f6-4894-b966-a6d0a7dfb202
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: DGwPfILQ8-LrN0DXZhKk3aHzYKW2BPBxlnXd6PlB48A
+id: sandpiper_landscapes_page_title
+theme: sandpiper_landscapes
+region: content
+weight: -15
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

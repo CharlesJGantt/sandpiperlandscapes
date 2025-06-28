@@ -1,0 +1,27 @@
+uuid: a245f41c-8702-4f67-9ad2-602d5a5ae487
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_headerimages
+theme: sandpiper_landscapes
+region: banner
+weight: -5
+provider: null
+plugin: 'block_content:5f5898bf-8897-46a3-8579-ee175622a51c'
+settings:
+  id: 'block_content:5f5898bf-8897-46a3-8579-ee175622a51c'
+  label: 'Header Images'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,22 @@
+uuid: 4d9ce0a1-c9ef-49bf-b751-5265e6857726
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: N3mAUX71Ei9jaOkH7Mo4KuwoBVvz_TYUbAlpj0__wfc
+id: sandpiper_landscapes_local_tasks
+theme: sandpiper_landscapes
+region: content
+weight: -16
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

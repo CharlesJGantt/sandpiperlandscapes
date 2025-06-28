@@ -1,0 +1,22 @@
+uuid: c67d437d-a1bd-4595-9533-0f6d132a6497
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: maPcb29lif4EihjY-bGntjJCJDQE_XY12ma9g842VzE
+id: sandpiper_landscapes_content
+theme: sandpiper_landscapes
+region: content
+weight: -14
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

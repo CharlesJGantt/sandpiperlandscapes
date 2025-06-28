@@ -1,0 +1,27 @@
+uuid: ae197ee3-ed4b-435b-86f1-e0ee67e02930
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: dWThK9obuv2HidRYuX-ouETy3DQj-duHrsgqdQUyoKc
+id: sandpiper_landscapes_tools
+theme: sandpiper_landscapes
+region: hidden_blocks_collection
+weight: -23
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

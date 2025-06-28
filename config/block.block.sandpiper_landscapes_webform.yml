@@ -1,0 +1,31 @@
+uuid: af682185-88a6-4946-9cff-047adaa28441
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.submit_a_quick_quote
+  module:
+    - system
+    - webform
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_webform
+theme: sandpiper_landscapes
+region: content_bottom_highlighted
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Quick Quote Submission Form'
+  label_display: visible
+  provider: webform
+  webform_id: submit_a_quick_quote
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact/quickquote

@@ -5,14 +5,7 @@ description: 'A custom subtheme of Bootstrap Business for Sandpiper Landscapes.'
 core_version_requirement: ^10 || ^11
 
 libraries:
-  - basecore/bootstrap
-  - basecore/global-styling
-  - basecore/mobile-menu-widget
-  - bootstrap_business/global-styling
   - sandpiper_landscapes/global-styling
-libraries-extend:
-  core/drupal.message:
-    - bootstrap_business/drupal.message
 
 # Only use this if you want to override base theme styles
 # libraries-override:

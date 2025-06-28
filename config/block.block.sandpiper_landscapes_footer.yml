@@ -1,0 +1,27 @@
+uuid: 39727f4f-6a1e-48bb-9068-2db7523cb892
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: ce_cc-srfizYJfu0w5FMGxbEvOQsA46Ks82IG5cwFQc
+id: sandpiper_landscapes_footer
+theme: sandpiper_landscapes
+region: footer
+weight: -8
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

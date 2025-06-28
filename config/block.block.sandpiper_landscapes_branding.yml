@@ -1,0 +1,25 @@
+uuid: f7f17af3-2d87-4cdc-aaab-ac74dbe1c731
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sandpiper_landscapes
+_core:
+  default_config_hash: hSjzwdNdgT4CwdHHo3fITtklldZlWLASD6EEUWf3t20
+id: sandpiper_landscapes_branding
+theme: sandpiper_landscapes
+region: header_top_second
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }
