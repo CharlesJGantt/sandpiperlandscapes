@@ -1,0 +1,351 @@
+.site-slogan {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    margin: 10px 0 10px 0;
+}
+
+/* ==========================================================================
+   Sandpiper Landscapes Quick Quote Webform Styling (Updated)
+   ========================================================================== */
+
+/* Form Section Styling */
+.webform-submission-form .form-section {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .webform-submission-form .form-item {
+    margin-bottom: 10px;
+  }
+  
+  .webform-submission-form .form-item label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .webform-submission-form input[type="text"],
+  .webform-submission-form input[type="email"],
+  .webform-submission-form input[type="tel"] {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 13px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .webform-submission-form input[type="text"]:focus,
+  .webform-submission-form input[type="email"]:focus,
+  .webform-submission-form input[type="tel"]:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 3px rgba(40, 167, 69, 0.2);
+  }
+  
+  /* Checkbox Styling */
+  .webform-submission-form input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #adb5bd;
+    border-radius: 4px;
+    background-color: #f1f3f5;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  
+  .webform-submission-form input[type="checkbox"]:checked {
+    background-color: #198754;
+    border-color: #198754;
+  }
+  
+  .webform-submission-form input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Radio Button Styling (New) */
+  .webform-submission-form input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    accent-color: #198754;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Add-on Services Cards */
+  .webform-submission-form .addon-service {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 0;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .webform-submission-form .addon-service:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .webform-submission-form .addon-service.is-checked {
+    background-color: #e0f7e9;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+  }
+  
+  .webform-submission-form .addon-service > div {
+    flex: 1;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+  
+  .webform-submission-form .addon-service label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    flex: 1;
+  }
+  
+  .webform-submission-form .addon-service p {
+    font-size: 16px;
+    color: #6c757d;
+    margin-top: 0;
+    line-height: 1.4;
+    margin-left: 30px;
+  }
+  
+  /* Approval Section (Radio Buttons with Description via data-description) */
+  .webform-submission-form .form-item.approval-decision .form-radios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .webform-submission-form .form-item.approval-decision .form-type-radio {
+    display: none;
+  }
+  
+  .webform-submission-form .form-item.approval-decision .form-type-radio + label {
+    display: inline-block;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .webform-submission-form .form-item.approval-decision .form-type-radio:checked + label {
+    background-color: #e0f7e9;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+  }
+  
+  .webform-submission-form .form-item.approval-decision .form-type-radio + label::after {
+    content: attr(data-description);
+    display: block;
+    font-size: 13px;
+    color: #6c757d;
+    margin-top: 6px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  
+  /* Requested Service Day (side by side) */
+  .webform-submission-form .form-item.requested-service-day .form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .webform-submission-form .form-item.requested-service-day .form-type-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+  }
+  
+  .webform-submission-form .form-item.requested-service-day .form-type-checkbox input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  .webform-submission-form .form-item.requested-service-day .form-type-checkbox label {
+    margin-top: 6px;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  /* Terms of Service */
+  .webform-submission-form .terms-of-service h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .webform-submission-form .terms-of-service p {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  /* Submit Button */
+  .webform-submission-form input[type="submit"] {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 25px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .webform-submission-form input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 576px) {
+    .webform-submission-form .addon-service {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .webform-submission-form .addon-service input[type="checkbox"] {
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  
+    .webform-submission-form .addon-service > div {
+      margin-left: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .webform-submission-form .addon-service label {
+      margin-bottom: 4px;
+      font-size: 15px;
+      width: 100%;
+    }
+  
+    .webform-submission-form .addon-service p {
+      margin-left: 0;
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    .webform-submission-form .form-item.approval-decision .form-radios {
+      flex-direction: column;
+    }
+  
+    .webform-submission-form .form-section {
+      padding: 12px;
+    }
+  
+    .webform-submission-form .form-item.requested-service-day .form-checkboxes {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .webform-submission-form .form-item.requested-service-day .form-type-checkbox {
+      align-items: flex-start;
+    }
+  
+    .webform-submission-form .form-item.requested-service-day .form-type-checkbox label {
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+  
+  /* ==========================================================================
+     End of Quick Quote Webform Styling
+     ========================================================================== */
+  
+
+     /* Quick Quote Info Section */
+.quick-quote-info-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Individual Card Columns */
+  .quick-quote-info-card,
+  .quick-quote-steps-card {
+    max-width: 560px;
+  }
+  
+  /* Shared Card Styling */
+  .quick-quote-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .quick-quote-card:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Title */
+  .quick-quote-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  /* Card Paragraph Text */
+  .quick-quote-card-text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Ordered Steps List */
+  .quick-quote-steps-list {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+  }
+  

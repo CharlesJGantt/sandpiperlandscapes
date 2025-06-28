@@ -27,6 +27,7 @@
         "drupal/gin_toolbar": "^2.0",
         "drupal/metatag": "^2.1",
         "drupal/pathauto": "^1.13",
+        "drupal/responsive_menus": "^2.0@beta",
         "drupal/seo_checklist": "^5.2",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/twbstools": "^2.1",
