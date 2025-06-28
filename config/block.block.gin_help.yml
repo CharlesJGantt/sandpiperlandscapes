@@ -1,6 +1,6 @@
 uuid: cc7a6629-bb64-4faf-aa2c-a337daac01e3
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - help
@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8nOAry2oKqJOr0zbrlJ3sZHDFJLIO6j-0vT0K_TYca4
 id: gin_help
 theme: gin
-region: header
-weight: 0
+region: help
+weight: -3
 provider: null
 plugin: help_block
 settings:

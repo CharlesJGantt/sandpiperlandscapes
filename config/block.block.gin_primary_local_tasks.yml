@@ -1,6 +1,6 @@
 uuid: 286eb363-7727-4ca8-8061-00e9805f8d2d
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - gin
@@ -9,7 +9,7 @@ _core:
 id: gin_primary_local_tasks
 theme: gin
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

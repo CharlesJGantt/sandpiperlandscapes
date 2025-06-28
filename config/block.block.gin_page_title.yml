@@ -1,6 +1,6 @@
 uuid: 70342769-8096-45f1-aed8-2543b60a3547
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - gin
@@ -9,7 +9,7 @@ _core:
 id: gin_page_title
 theme: gin
 region: header
-weight: -30
+weight: -4
 provider: null
 plugin: page_title_block
 settings:
