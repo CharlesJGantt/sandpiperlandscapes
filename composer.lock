@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bed6b2c1e2e0792a3251df63d2b48cdb",
+    "content-hash": "ae31a039a14e6fc968617e21e1fbab54",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1387,6 +1387,124 @@
             }
         },
         {
+            "name": "drupal/bootstrap_layout_builder",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_layout_builder.git",
+                "reference": "2.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_layout_builder-2.2.1.zip",
+                "reference": "2.2.1",
+                "shasum": "a13972a2299b44f710b0ac5eae67563771d2392f"
+            },
+            "require": {
+                "drupal/bootstrap_styles": "^1.2.0",
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.1",
+                    "datestamp": "1726578341",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Amira Dowidar",
+                    "homepage": "https://www.drupal.org/user/3092603"
+                },
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Add Bootstrap Grid support to Layout Builder module.",
+            "homepage": "https://www.drupal.org/project/bootstrap_layout_builder",
+            "keywords": [
+                "Bootstrap",
+                "Drupal",
+                "Grid",
+                "Layout Builder"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_layout_builder"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_styles",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_styles.git",
+                "reference": "1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_styles-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "d7c3b7c81f057edd821d128ce2addd8158ac114b"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/media_library_form_element": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.1",
+                    "datestamp": "1726504417",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Amira Dowidar",
+                    "homepage": "https://www.drupal.org/user/3092603"
+                },
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Add a plugins builder and a collection of reusable plugins to the Layout Builder module.",
+            "homepage": "https://www.drupal.org/project/bootstrap_styles",
+            "keywords": [
+                "Bootstrap",
+                "Drupal",
+                "Grid",
+                "Layout Builder"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_styles"
+            }
+        },
+        {
             "name": "drupal/checklistapi",
             "version": "2.1.6",
             "source": {
@@ -1791,6 +1909,48 @@
             "time": "2025-06-19T00:37:21+00:00"
         },
         {
+            "name": "drupal/core_event_dispatcher",
+            "version": "4.2.0",
+            "require": {
+                "drupal/core": "^10.2 || ^11",
+                "drupal/hook_event_dispatcher": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "4.2.0",
+                    "datestamp": "1727021695",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "el7cosmos",
+                    "homepage": "https://www.drupal.org/user/251087"
+                },
+                {
+                    "name": "pdenooijer",
+                    "homepage": "https://www.drupal.org/user/3175437"
+                },
+                {
+                    "name": "robin.ingelbrecht",
+                    "homepage": "https://www.drupal.org/user/2339074"
+                }
+            ],
+            "description": "Registers event dispatchers for several core hooks",
+            "homepage": "https://www.drupal.org/project/hook_event_dispatcher",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hook_event_dispatcher"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "4.1.0",
             "source": {
@@ -1940,6 +2100,140 @@
             }
         },
         {
+            "name": "drupal/ebt_core",
+            "version": "1.4.30",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_core.git",
+                "reference": "1.4.30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_core-1.4.30.zip",
+                "reference": "1.4.30",
+                "shasum": "fcb0e36d73b792bc5b1890a2631ca25fe2f0ba61"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/field_group": "^3.0",
+                "drupal/media_library_form_element": "^2.0",
+                "levmyshkin/jquery-colorpicker": "^1.0",
+                "levmyshkin/jquery-mb-ytplayer": "^3.3.10",
+                "levmyshkin/parallaxjs": "^1.5",
+                "levmyshkin/vidbg": "^2.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.30",
+                    "datestamp": "1728848853",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                },
+                {
+                    "name": "narine_tsaturyan",
+                    "homepage": "https://www.drupal.org/user/3723666"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Core",
+            "homepage": "https://drupal.org/project/ebt_core",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_core",
+                "issues": "https://www.drupal.org/project/issues/ebt_core"
+            }
+        },
+        {
+            "name": "drupal/field_group",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_group.git",
+                "reference": "8.x-3.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.6.zip",
+                "reference": "8.x-3.6",
+                "shasum": "427c0a65dc1936e69e60c120776056cfe5b43e86"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/jquery_ui_accordion": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.6",
+                    "datestamp": "1722672510",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "joevagyok",
+                    "homepage": "https://www.drupal.org/user/2876343"
+                },
+                {
+                    "name": "jyve",
+                    "homepage": "https://www.drupal.org/user/591438"
+                },
+                {
+                    "name": "nils.destoop",
+                    "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
+                },
+                {
+                    "name": "swentel",
+                    "homepage": "https://www.drupal.org/user/107403"
+                }
+            ],
+            "description": "Provides the field_group module.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_group",
+                "issues": "https://www.drupal.org/project/issues/field_group"
+            }
+        },
+        {
             "name": "drupal/gin",
             "version": "4.1.0",
             "source": {
@@ -2006,6 +2300,71 @@
             ]
         },
         {
+            "name": "drupal/gin_lb",
+            "version": "2.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gin_lb.git",
+                "reference": "2.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin_lb-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "0983de43c6a7abd0203831ef418e37d4f682fd13"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/gin": "^4.0",
+                "drupal/gin_toolbar": "^2.0"
+            },
+            "conflict": {
+                "drupal/lb_claro": "*"
+            },
+            "require-dev": {
+                "drupal/field_group": "*",
+                "drupal/section_library": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1745915842",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "christian.wiedemann",
+                    "homepage": "https://www.drupal.org/user/861002"
+                },
+                {
+                    "name": "duwid",
+                    "homepage": "https://www.drupal.org/user/2693877"
+                },
+                {
+                    "name": "grimreaper",
+                    "homepage": "https://www.drupal.org/user/2388214"
+                },
+                {
+                    "name": "sch4lly",
+                    "homepage": "https://www.drupal.org/user/856550"
+                }
+            ],
+            "description": "Layout Builder in Gin style.",
+            "homepage": "https://www.drupal.org/project/gin_lb",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gin_lb"
+            }
+        },
+        {
             "name": "drupal/gin_toolbar",
             "version": "2.1.0",
             "source": {
@@ -2067,6 +2426,73 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/hook_event_dispatcher",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/hook_event_dispatcher.git",
+                "reference": "4.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/hook_event_dispatcher-4.2.0.zip",
+                "reference": "4.2.0",
+                "shasum": "8a3c2278778150bd2c61c15b1676a67d4fbc2a5b"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11.0",
+                "php": ">=8.1.0"
+            },
+            "require-dev": {
+                "drupal/core_event_dispatcher": "*",
+                "drupal/paragraphs": "^1.10",
+                "drupal/tracer": "^1.0",
+                "drupal/webform": "^6.2",
+                "mglaman/phpstan-drupal": "^1.1",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0"
+            },
+            "suggest": {
+                "drupal/paragraphs": "Enables the creation of paragraphs entities.",
+                "drupal/token": "Provides additional tokens not supported by core (most notably fields), as well as a UI for browsing tokens."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.2.0",
+                    "datestamp": "1727021695",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "el7cosmos",
+                    "homepage": "https://www.drupal.org/user/251087"
+                },
+                {
+                    "name": "pdenooijer",
+                    "homepage": "https://www.drupal.org/user/3175437"
+                },
+                {
+                    "name": "robin.ingelbrecht",
+                    "homepage": "https://www.drupal.org/user/2339074"
+                }
+            ],
+            "description": "Dispatches events for several drupal core hooks.",
+            "homepage": "https://drupal.org/project/hook_event_dispatcher",
+            "support": {
+                "source": "https://git.drupalcode.org/project/hook_event_dispatcher",
+                "issues": "https://drupal.org/project/issues/hook_event_dispatcher"
+            }
         },
         {
             "name": "drupal/jquery_ui",
@@ -2162,6 +2588,442 @@
             "homepage": "https://www.drupal.org/project/jquery_ui",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui"
+            }
+        },
+        {
+            "name": "drupal/layout_bg",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_bg.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_bg-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "fa37cc6636eb07e4c303e4371faca197ee0dc587"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1720204583",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "danflanagan8",
+                    "homepage": "https://www.drupal.org/user/3615359"
+                }
+            ],
+            "description": "Provides Layout plugins that make background images easy.",
+            "homepage": "https://www.drupal.org/project/layout_bg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_bg"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_blocks",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_blocks.git",
+                "reference": "1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_blocks-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "c6a662e731cc5680b8f4dc4e7347689ef5199ad6"
+            },
+            "require": {
+                "drupal/bootstrap_styles": "^1.1 || ^2.0",
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.2",
+                    "datestamp": "1726509193",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Amira Dowidar",
+                    "homepage": "https://www.drupal.org/user/3092603"
+                },
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Add UI styles support to blocks from Layout Builder module.",
+            "homepage": "https://www.drupal.org/project/layout_builder_blocks",
+            "keywords": [
+                "Drupal",
+                "Layout Builder",
+                "UI",
+                "style"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_blocks"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_component_attributes",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_component_attributes.git",
+                "reference": "2.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_component_attributes-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "a43241bb6a56d927f75ac2fc901d1aebcd4cca01"
+            },
+            "require": {
+                "drupal/core": "^10.0|^11.0",
+                "neilime/php-css-lint": "^2.0|^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.0",
+                    "datestamp": "1724946488",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "chris burge",
+                    "homepage": "https://www.drupal.org/user/1826152"
+                }
+            ],
+            "description": "Allows editors to add HTML attributes to Layout Builder components (blocks)",
+            "homepage": "https://drupal.org/project/layout_builder_component_attributes",
+            "support": {
+                "source": "https://cgit.drupalcode.org/layout_builder_component_attributes",
+                "issues": "https://drupal.org/project/issues/layout_builder_component_attributes"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_kit",
+            "version": "3.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_kit.git",
+                "reference": "3.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_kit-3.0.0-beta2.zip",
+                "reference": "3.0.0-beta2",
+                "shasum": "c4fd2cd6fae3d0949f5806f0f9470296f249ff40"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/core_event_dispatcher": "*",
+                "drupal/hook_event_dispatcher": "^4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-beta2",
+                    "datestamp": "1742693938",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aangel",
+                    "homepage": "https://www.drupal.org/user/69305"
+                },
+                {
+                    "name": "alvarito75",
+                    "homepage": "https://www.drupal.org/user/2541368"
+                },
+                {
+                    "name": "veronicanerak",
+                    "homepage": "https://www.drupal.org/user/1442284"
+                }
+            ],
+            "description": "Provide flexible Layout Builder components.",
+            "homepage": "https://www.drupal.org/project/layout_builder_kit",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_builder_kit",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_kit"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_tabs",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_tabs.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_tabs-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "a8ef9cd3e30b8d783098550d16694ca382d45e1e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1713024091",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                }
+            ],
+            "description": "Provides a layout to show blocks as a tabs set",
+            "homepage": "https://www.drupal.org/project/layout_builder_tabs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_tabs"
+            }
+        },
+        {
+            "name": "drupal/layout_custom_section_classes",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_custom_section_classes.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_custom_section_classes-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "70e61174343e99f2309ccdd10498597e828ae5f4"
+            },
+            "require": {
+                "drupal/core": "^9.5|^10|^11",
+                "neilime/php-css-lint": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1718132899",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "kaszarobert",
+                    "homepage": "https://www.drupal.org/user/3578328"
+                }
+            ],
+            "description": "Allows editors to add HTML attributes to Layout Builder sections and its regions",
+            "homepage": "https://drupal.org/project/layout_custom_section_classes",
+            "support": {
+                "source": "https://cgit.drupalcode.org/layout_custom_section_classes",
+                "issues": "https://drupal.org/project/issues/layout_custom_section_classes"
+            }
+        },
+        {
+            "name": "drupal/layout_library",
+            "version": "1.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_library.git",
+                "reference": "8.x-1.0-beta5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_library-8.x-1.0-beta5.zip",
+                "reference": "8.x-1.0-beta5",
+                "shasum": "0d5a4ef93194bad2ac3988199b3bf3f433846e41"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta5",
+                    "datestamp": "1736286495",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eclipsegc",
+                    "homepage": "https://www.drupal.org/user/61203"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                },
+                {
+                    "name": "xjm",
+                    "homepage": "https://www.drupal.org/user/65776"
+                }
+            ],
+            "description": "Provides a library of layouts for content-editors to select from",
+            "homepage": "https://www.drupal.org/project/layout_library",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_library",
+                "issues": "http://drupal.org/project/issues/layout_library"
+            }
+        },
+        {
+            "name": "drupal/media_library_form_element",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_library_form_element.git",
+                "reference": "2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "4e4ebb8a4642f3cfe700c8cac0009db1f7d3cb99"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.1",
+                    "datestamp": "1724676084",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kim Kennof",
+                    "homepage": "https://www.drupal.org/u/nightlife2008",
+                    "email": "kim.kennof@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "AUSY, a randstad company",
+                    "homepage": "https://www.ausy.be",
+                    "email": "info@ausy.be",
+                    "role": "Sponsor"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "nightlife2008",
+                    "homepage": "https://www.drupal.org/user/333515"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                }
+            ],
+            "description": "This module provides a Media Library Form API element to be used in all sorts of forms.",
+            "homepage": "https://www.drupal.org/project/media_library_form_element",
+            "keywords": [
+                "Drupal",
+                "Form API",
+                "Media",
+                "Media Library"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_library_form_element",
+                "issues": "https://www.drupal.org/project/issues/media_library_form_element"
             }
         },
         {
@@ -3527,6 +4389,132 @@
             "time": "2025-05-20T12:55:37+00:00"
         },
         {
+            "name": "levmyshkin/jquery-colorpicker",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/jquery_colorpicker.git",
+                "reference": "45f9ac11079b73885186ce73b531f0bba1812c7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/jquery_colorpicker/zipball/45f9ac11079b73885186ce73b531f0bba1812c7f",
+                "reference": "45f9ac11079b73885186ce73b531f0bba1812c7f",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT or GPL-1.0)"
+            ],
+            "description": "The jQuery Colorpicker JS/CSS library. Fork from jaypan/jquery_colorpicker.",
+            "homepage": "https://www.eyecon.ro/colorpicker/",
+            "keywords": [
+                "EBT",
+                "colorpicker",
+                "drupal",
+                "jquery"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/jquery_colorpicker/tree/1.0.2"
+            },
+            "time": "2021-12-01T11:34:35+00:00"
+        },
+        {
+            "name": "levmyshkin/jquery-mb-ytplayer",
+            "version": "3.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/jquery.mb.YTPlayer.git",
+                "reference": "037f9d56dc2efb986e4ea89609d7edf2aa0ff438"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/jquery.mb.YTPlayer/zipball/037f9d56dc2efb986e4ea89609d7edf2aa0ff438",
+                "reference": "037f9d56dc2efb986e4ea89609d7edf2aa0ff438",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT)"
+            ],
+            "description": "jquery.mb.YTPlayer plugin as drupal-library. Fork from https://github.com/pupunzi/jquery.mb.YTPlayer.",
+            "homepage": "https://pupunzi.com/#mb.components/mb.YTPlayer/YTPlayer.html",
+            "keywords": [
+                "EBT",
+                "drupal",
+                "jquery.mb.YTPlayer"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/jquery.mb.YTPlayer/tree/3.3.10"
+            },
+            "time": "2021-12-24T14:45:07+00:00"
+        },
+        {
+            "name": "levmyshkin/parallaxjs",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/parallax.js.git",
+                "reference": "bed64e1ad39cabe1130505010f5aaaeb50d4cf86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/parallax.js/zipball/bed64e1ad39cabe1130505010f5aaaeb50d4cf86",
+                "reference": "bed64e1ad39cabe1130505010f5aaaeb50d4cf86",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT)"
+            ],
+            "description": "Parallax.js pluging as drupal-library. Fork from pixelcog/parallax.js.",
+            "homepage": "https://pixelcog.github.io/parallax.js/",
+            "keywords": [
+                "EBT",
+                "drupal",
+                "parallax.js"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/parallax.js/tree/v1.5.1"
+            },
+            "time": "2021-12-12T14:41:01+00:00"
+        },
+        {
+            "name": "levmyshkin/vidbg",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/vidbg.git",
+                "reference": "29ba2e3bc55f2b238e9a74b6997bbd67630c653e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/vidbg/zipball/29ba2e3bc55f2b238e9a74b6997bbd67630c653e",
+                "reference": "29ba2e3bc55f2b238e9a74b6997bbd67630c653e",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "An HTML5 video player.",
+            "homepage": "https://drupalbook.org/",
+            "keywords": [
+                "HTML5",
+                "player",
+                "video",
+                "video background"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/vidbg/tree/2.1.0"
+            },
+            "time": "2024-05-03T09:32:29+00:00"
+        },
+        {
             "name": "masterminds/html5",
             "version": "2.9.0",
             "source": {
@@ -3641,6 +4629,80 @@
                 "source": "https://github.com/mck89/peast/tree/v1.17.0"
             },
             "time": "2025-03-07T19:44:14+00:00"
+        },
+        {
+            "name": "neilime/php-css-lint",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neilime/php-css-lint.git",
+                "reference": "08adc7b55af6ae5bf671ac5b105620dc6e6c55c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neilime/php-css-lint/zipball/08adc7b55af6ae5bf671ac5b105620dc6e6c55c0",
+                "reference": "08adc7b55af6ae5bf671ac5b105620dc6e6c55c0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "pcov/clobber": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^9.5.27",
+                "slam/phpstan-laminas-framework": "^0.12",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "bin": [
+                "scripts/php-css-lint"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CssLint\\": "src/CssLint"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Neilime",
+                    "homepage": "https://github.com/neilime",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Powerful & memory efficient CSS linter for PHP",
+            "homepage": "https://neilime.github.io/php-css-lint/",
+            "keywords": [
+                "css",
+                "lint",
+                "linter",
+                "syntax",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/neilime/php-css-lint/issues",
+                "source": "https://github.com/neilime/php-css-lint/tree/v3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/neilime",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-19T16:35:21+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -7261,6 +8323,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/gin_lb": 10,
+        "drupal/layout_builder_kit": 10,
+        "drupal/layout_library": 10,
         "drupal/responsive_menus": 10
     },
     "prefer-stable": true,

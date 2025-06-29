@@ -349,3 +349,534 @@
     line-height: 1.6;
   }
   
+  /* ==========================================================================
+     Front Page Services Cards Styling
+     ========================================================================== */
+  
+     @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+     body {
+       font-family: "Baloo 2", cursive;
+       font-size: 16px;
+       color: #ffffff;
+       text-rendering: optimizeLegibility;
+       font-weight: initial;
+     }
+     
+     .dark {
+       background: #110f16;
+     }
+     
+     .light {
+       background: #f3f5f7;
+     }
+     
+     a,
+     a:hover {
+       text-decoration: none;
+       transition: color 0.3s ease-in-out;
+     }
+     
+     #pageHeaderTitle {
+       margin: 2rem 0;
+       text-transform: uppercase;
+       text-align: center;
+       font-size: 2.5rem;
+     }
+     
+     /* Cards */
+     .postcard {
+       flex-wrap: wrap;
+       display: flex;
+       box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+       border-radius: 10px;
+       margin: 0 0 2rem 0;
+       overflow: hidden;
+       position: relative;
+       color: #ffffff;
+     }
+     
+     .postcard.dark {
+       background-color: #18151f;
+     }
+     
+     .postcard.light {
+       background-color: #e1e5ea;
+     }
+     
+     .postcard .t-dark {
+       color: #18151f;
+     }
+     
+     .postcard a {
+       color: inherit;
+     }
+     
+     .postcard h1,
+     .postcard .h1 {
+       margin-bottom: 0.5rem;
+       font-weight: 500;
+       line-height: 1.2;
+     }
+     
+     .postcard .small {
+       font-size: 80%;
+     }
+     
+     .postcard .postcard__title {
+       font-size: 1.75rem;
+     }
+     
+     .postcard .postcard__img {
+       max-height: 180px;
+       width: 100%;
+       object-fit: cover;
+       position: relative;
+     }
+     
+     .postcard .postcard__img_link {
+       display: contents;
+     }
+     
+     .postcard .postcard__bar {
+       width: 50px;
+       height: 10px;
+       margin: 10px 0;
+       border-radius: 5px;
+       background-color: #424242;
+       transition: width 0.2s ease;
+     }
+     
+     .postcard .postcard__text {
+       padding: 1.5rem;
+       position: relative;
+       display: flex;
+       flex-direction: column;
+     }
+     
+     .postcard .postcard__preview-txt {
+       overflow: hidden;
+       text-overflow: ellipsis;
+       text-align: justify;
+       height: 100%;
+     }
+     
+     .postcard .postcard__tagbox {
+       display: flex;
+       flex-flow: row wrap;
+       font-size: 14px;
+       margin: 20px 0 0 0;
+       padding: 0;
+       justify-content: center;
+     }
+     
+     .postcard .postcard__tagbox .tag__item {
+       display: inline-block;
+       background: rgba(83, 83, 83, 0.4);
+       border-radius: 3px;
+       padding: 2.5px 10px;
+       margin: 0 5px 5px 0;
+       cursor: default;
+       user-select: none;
+       transition: background-color 0.3s;
+     }
+     
+     .postcard .postcard__tagbox .tag__item:hover {
+       background: rgba(83, 83, 83, 0.8);
+     }
+     
+     .postcard::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       background-image: linear-gradient(-70deg, #424242, transparent 50%);
+       opacity: 1;
+       border-radius: 10px;
+     }
+     
+     .postcard:hover .postcard__bar {
+       width: 100px;
+     }
+     
+     /* Colors and hover states */
+     .postcard .postcard__tagbox .green.play:hover {
+       background: #79dd09;
+       color: black;
+     }
+     
+     .green .postcard__title:hover {
+       color: #79dd09;
+     }
+     
+     .green .postcard__bar {
+       background-color: #79dd09;
+     }
+     
+     .green::before {
+       background-image: linear-gradient(-30deg, rgba(121, 221, 9, 0.1), transparent 50%);
+     }
+     
+     .green:nth-child(2n)::before {
+       background-image: linear-gradient(30deg, rgba(121, 221, 9, 0.1), transparent 50%);
+     }
+     
+     .postcard .postcard__tagbox .blue.play:hover {
+       background: #0076bd;
+     }
+     
+     .blue .postcard__title:hover {
+       color: #0076bd;
+     }
+     
+     .blue .postcard__bar {
+       background-color: #0076bd;
+     }
+     
+     .blue::before {
+       background-image: linear-gradient(-30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+     }
+     
+     .blue:nth-child(2n)::before {
+       background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%);
+     }
+     
+     .postcard .postcard__tagbox .red.play:hover {
+       background: #bd150b;
+     }
+     
+     .red .postcard__title:hover {
+       color: #bd150b;
+     }
+     
+     .red .postcard__bar {
+       background-color: #bd150b;
+     }
+     
+     .red::before {
+       background-image: linear-gradient(-30deg, rgba(189, 21, 11, 0.1), transparent 50%);
+     }
+     
+     .red:nth-child(2n)::before {
+       background-image: linear-gradient(30deg, rgba(189, 21, 11, 0.1), transparent 50%);
+     }
+     
+     .postcard .postcard__tagbox .yellow.play:hover {
+       background: #bdbb49;
+       color: black;
+     }
+     
+     .yellow .postcard__title:hover {
+       color: #bdbb49;
+     }
+     
+     .yellow .postcard__bar {
+       background-color: #bdbb49;
+     }
+     
+     .yellow::before {
+       background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+     }
+     
+     .yellow:nth-child(2n)::before {
+       background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+     }
+     
+     /* Responsive styles */
+     @media screen and (min-width: 769px) {
+       .postcard {
+         flex-wrap: inherit;
+       }
+     
+       .postcard .postcard__title {
+         font-size: 2rem;
+       }
+     
+       .postcard .postcard__tagbox {
+         justify-content: start;
+       }
+     
+       .postcard .postcard__img {
+         max-width: 300px;
+         max-height: 100%;
+         transition: transform 0.3s ease;
+       }
+     
+       .postcard .postcard__text {
+         padding: 3rem;
+         width: 100%;
+       }
+     
+       .media.postcard__text:before {
+         content: "";
+         position: absolute;
+         display: block;
+         background: #18151f;
+         top: -20%;
+         height: 130%;
+         width: 55px;
+       }
+     
+       .postcard:hover .postcard__img {
+         transform: scale(1.1);
+       }
+     
+       .postcard:nth-child(2n+1) {
+         flex-direction: row;
+       }
+     
+       .postcard:nth-child(2n+0) {
+         flex-direction: row-reverse;
+       }
+     
+       .postcard:nth-child(2n+1) .postcard__text::before {
+         left: -12px !important;
+         transform: rotate(4deg);
+       }
+     
+       .postcard:nth-child(2n+0) .postcard__text::before {
+         right: -12px !important;
+         transform: rotate(-4deg);
+       }
+     
+       .green::before {
+         background-image: linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%);
+       }
+     
+       .green:nth-child(2n)::before {
+         background-image: linear-gradient(80deg, rgba(121, 221, 9, 0.1), transparent 50%);
+       }
+     
+       .blue::before {
+         background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+       }
+     
+       .blue:nth-child(2n)::before {
+         background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+       }
+     
+       .red::before {
+         background-image: linear-gradient(-80deg, rgba(189, 21, 11, 0.1), transparent 50%);
+       }
+     
+       .red:nth-child(2n)::before {
+         background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%);
+       }
+     
+       .yellow::before {
+         background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+       }
+     
+       .yellow:nth-child(2n)::before {
+         background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+       }
+     }
+     
+     @media screen and (min-width: 1024px) {
+       .postcard__text {
+         padding: 2rem 3.5rem;
+       }
+     
+       .postcard__text:before {
+         content: "";
+         position: absolute;
+         display: block;
+         top: -20%;
+         height: 130%;
+         width: 55px;
+       }
+     
+       .postcard.dark .postcard__text:before {
+         background: #18151f;
+       }
+     
+       .postcard.light .postcard__text:before {
+         background: #e1e5ea;
+       }
+     }
+     
+/* ==========================================================================
+     End Front Page Services Cards Styling
+     ========================================================================== */
+
+/* ================================
+   Front Page Form: Compact Card
+   ================================ */
+
+   .fp-form-wrapper-outer {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background: transparent;
+  }
+  
+  .fp-form-wrapper {
+    background: rgb(255 224 0 / 75%);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px 18px;
+    max-width: 420px;
+    width: 100%;
+  }
+  
+  .fp-form-inner {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .fp-form-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  
+  .fp-form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    display: block;
+  }
+  
+  .fp-form-group input[type="text"],
+  .fp-form-group input[type="email"],
+  .fp-form-group input[type="tel"],
+  .fp-form-group select {
+    font-size: 13px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .fp-name .webform-flexbox {
+    display: flex;
+    gap: 8px;
+  }
+  .fp-name .webform-flexbox > div {
+    flex: 1;
+  }
+  
+  .fp-inline-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .fp-inline-group .fp-form-group {
+    flex: 1 1 48%;
+    min-width: 120px;
+  }
+  
+  .fp-address input[type="text"] {
+    margin-bottom: 6px;
+  }
+  
+  .fp-service-request-type select {
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 4px;
+  }
+  
+  .fp-submit {
+    background: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .fp-submit:hover {
+    background: #218838;
+  }
+  
+  /* Remove webform layout spacing */
+  .webform-flexbox {
+    margin: 0 !important;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .fp-form-wrapper {
+      padding: 14px 12px;
+      max-width: 100%;
+    }
+  
+    .fp-inline-group {
+      flex-direction: column;
+    }
+  
+    .fp-inline-group .fp-form-group {
+      width: 100%;
+    }
+  }
+  
+  /* Apply background image to #banner only on the front page */
+  body.path-frontpage .region-banner {
+    background-image: url("../images/CharlesMowing.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    position: relative;
+    color: white;
+  }
+  
+  body.path-frontpage .region-banner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  body.path-frontpage .region-banner > * {
+    position: relative;
+    z-index: 2;
+  }
+  /* Prevent spacing from empty banner */
+#banner:empty,
+.region-banner:empty,
+.banner:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body:not(.has-banner) #banner {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .main-content__section, .sidebar__section {
+    padding: 0px 0 70px;
+}
+
+.fp-header-bg-section-first .block-webform {
+    position: relative;
+    top: 20px;      /* Push down */
+    left: 20px;     /* Push to the right */
+  }
+  
+  #edit-quote-wrapper {
+    border: 5px solid white;
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px; /* Optional: adds space inside the border */
+    background-color: white; /* Optional: ensures the form has a white background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+  }
+  
