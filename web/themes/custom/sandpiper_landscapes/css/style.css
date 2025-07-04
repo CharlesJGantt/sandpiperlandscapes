@@ -1019,82 +1019,1023 @@ body:not(.has-banner) #banner {
     line-height: 1;
 }
 
+/* Hide mobile images on desktop */
+.mobile-top-image,
+.mobile-middle-image, 
+.mobile-bottom-image,
+.mobile-mowing-image {
+    display: none;
+}
+
 /* ========== RESPONSIVE LAYOUT ========== */
 @media (max-width: 768px) {
     .lawn-care-graphic {
-      aspect-ratio: unset;
-      padding: 1rem;
+        aspect-ratio: unset;
+        padding: 1rem;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Reduced from 2rem */
     }
-  
+
+    /* Hide desktop absolute positioned images */
+    .image-layer {
+        display: none;
+    }
+
+    /* Show and style mobile images */
+    .mobile-top-image,
+    .mobile-bottom-image {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Keep middle image hidden on mobile */
+    .mobile-middle-image {
+        display: none;
+    }
+
+    /* Show and style mobile mowing image */
+    .mobile-mowing-image {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto; /* Removed bottom margin entirely */
+        order: 4; /* Fourth in mobile stack - between green box and services */
+    }
+
+    .mobile-top-image {
+        order: 2; /* Second in mobile stack - after title */
+        margin-bottom: 0.1rem; /* Tight spacing above green box */
+    }
+
     .hero-title {
-      margin-bottom: 2rem;
-      text-align: center;
+        margin-bottom: 0.2rem; /* Further reduced from 0.5rem */
+        text-align: center;
+        order: 1; /* First in mobile stack - before top image */
     }
-  
+
     .hero-title h1 {
-      font-size: 2.2rem;
-      max-width: 100%;
-      text-align: center;
+        font-size: 2.5rem;
+        max-width: 100%;
+        text-align: center;
+        line-height: 1.1;
     }
-  
+
     .content-layer {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+        order: 3; /* Third in mobile stack */
+        gap: 1rem;
     }
-  
+
     .green-box {
-      flex-direction: column;
-      padding: 2rem 1.5rem; /* Increased padding for better readability */
-      max-width: 100%;
-      min-height: auto;
-      margin-right: 0;
-      box-sizing: border-box;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+        min-height: auto;
+        margin-right: 0;
+        box-sizing: border-box;
+        max-height: none;
     }
-  
+
     .green-box-inner {
-      max-width: 100%;
+        max-width: 100%;
     }
-  
+
+    .green-box-inner p {
+        font-size: 1.4rem;
+        margin: 0.75rem 0;
+        line-height: 1.4;
+    }
+
+    /* Hide the middle image inside green box on mobile */
     .middle-right-img {
-      width: 75vw;
-      margin: 2rem auto 0;
-      margin-right: 0;
-      display: block;
+        display: none;
     }
-  
+
+    .service-section {
+        padding-left: 0;
+        text-align: center;
+        order: 5; /* Fifth in mobile stack (after mowing image) */
+        width: 100%;
+        margin-top: 0rem; /* Reduced from 1rem */
+    }
+
     .service-bubble {
-      font-size: 1.5rem;
-      padding: 0.5rem 1.2rem;
-      margin: 2rem 0 1.2rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+        margin: 1.5rem auto 1.5rem;
+        display: block;
+        text-align: center;
+        white-space: normal;
+        max-width: 280px;
     }
-  
+
     .service-list {
-      text-align: left;
-      padding: 0 1rem;
+        text-align: left;
+        padding: 0 1.5rem;
+        max-width: 350px;
+        margin: 0 auto;
+        background: rgba(245, 245, 245, 0.5);
+        border-radius: 16px;
+        padding: .5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-  
+
     .service-list li {
-      font-size: 1.2rem;
-      padding-left: 2.2rem;
-      line-height: 2rem;
-      font-weight: 700;
-      position: relative;
-      display: flex;
-      align-items: center;
+        font-size: 1.2rem;
+        padding-left: 2.2rem;
+        line-height: 1.8rem;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.1rem;
+        color: #2a5a07;
     }
-  
+
+    .service-list li:last-child {
+        margin-bottom: 0;
+    }
+
     .service-list li::before {
-      font-family: "Font Awesome 6 Free";
-      content: "\f14a"; /* fa-square-check */
-      font-weight: 900;
-      color: #61af2e;
-      position: absolute;
-      left: 0;
-      top: 0.15rem;
-      font-size: 1.6rem;
-      line-height: 1;
+        font-family: "Font Awesome 6 Free";
+        content: "\f14a"; /* fa-square-check */
+        font-weight: 900;
+        color: #61af2e;
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        font-size: 1.4rem;
+        line-height: 1;
+        flex-shrink: 0;
     }
-  }
-  
+
+    /* Mobile bottom image */
+    .mobile-bottom-image {
+        order: 6; /* Sixth in mobile stack (after services) */
+        width: 100%;
+        max-width: 600px;
+        margin-top: 0rem;
+    }
+}
+
+
+/*
+===============================================================================
+                    PET WASTE CLEANUP SERVICE GRAPHIC STYLES
+===============================================================================
+
+This CSS section contains all the styling for the Pet Waste Cleanup Service 
+landing page graphic for Drupal 10 integration. This section creates a 
+professional, responsive design featuring curved organic shapes, layered 
+images, and SEO-optimized content layout.
+
+Key Features:
+- Curved white sections using CSS clip-path for organic flowing design
+- Responsive image containers with proper z-index layering
+- Green gradient typography matching brand colors
+- Mobile-first responsive design approach
+- Optimized for Drupal 10 content blocks
+- Semantic HTML structure support
+
+Image Requirements (stored in /sites/default/files/images/):
+- corgi-srvc-gfx.png (Top left curved container)
+- no-squat-srvc-gfx.png (Top right circular container)
+- grass-sprinkle-srvc-gfx.png (Middle right curved container)
+- golden-good-boy-srvc-gfx.png (Bottom right flowing container)
+- bottom-grass-srvc-gfx.png (Bottom background grass)
+
+Usage: Add the HTML content to a Drupal content block and paste this CSS 
+into your theme's style.css file.
+
+Version: 1.0
+Last Updated: July 2025
+===============================================================================
+*/
+
+/* Pet Waste Cleanup Service Graphic Styles */
+.pet-waste-service-container {
+    position: relative;
+    width: 100%;
+    min-height: 1600px;
+    background: linear-gradient(135deg, #fff8e1 0%, #f1f8e9 50%, #d0ffd0 100%);
+    overflow: hidden;
+}
+
+/* Curved Background Sections */
+.pet-waste-service-container .curved-section {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+}
+
+.pet-waste-service-container .section-1 {
+    top: -50px;
+    left: -100px;
+    width: 85%;
+    height: 650px;
+    z-index: 1;
+}
+
+.pet-waste-service-container .section-2 {
+    top: 100px;
+    right: -150px;
+    width: 75%;
+    height: 500px;
+    z-index: 2;
+}
+
+/* Image Containers */
+.pet-waste-service-container .image-container {
+    position: absolute;
+    border-radius: 0px;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    z-index: 3;
+}
+
+.pet-waste-service-container .corgi-container {
+    top: 20px;
+    left: 40px;
+    width: 90%;
+    border-radius: 0px;
+}
+
+.pet-waste-service-container .no-squat-container {
+    top: 60px;
+    right: -20px;
+    width: 50%;
+    border-radius: 0%;
+}
+
+.pet-waste-service-container .sprinkler-container {
+    top: 580px;
+    right: 15px;
+    width: 60%;
+    border-radius: 0px;
+}
+
+.pet-waste-service-container .golden-container {
+    bottom: -50px;
+    right: -50px;
+    width: 50%;
+    border-radius: 0px;
+    border: none;
+    z-index: 3;
+}
+
+.pet-waste-service-container .bottom-grass-container {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 0px;
+    border: none;
+    z-index: 2;
+}
+
+.pet-waste-service-container .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.pet-waste-service-container .main-content {
+    position: relative;
+    z-index: 4;
+    padding: 780px 50px 150px 50px;
+    max-width: 700px;
+}
+
+.pet-waste-service-container .main-content .pet-waste-title-line-1,
+.pet-waste-service-container .main-content .pet-waste-title-line-2 {
+    font-family: 'Nunito Sans', Arial, sans-serif !important;
+    font-size: 5rem !important;
+    font-weight: 900 !important;
+    line-height: 0.9 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+}
+
+.pet-waste-service-container .main-content .pet-waste-title-line-1 {
+    background: linear-gradient(45deg, #4a5d23, #6b8e3d) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.pet-waste-service-container .main-content .pet-waste-title-line-2 {
+    background: linear-gradient(45deg, #2d5016, #4a7c2a) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    margin-bottom: 30px !important;
+}
+
+.pet-waste-service-container .main-content .pet-waste-custom-description {
+    font-size: 1.45rem !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    margin-bottom: 40px !important;
+    font-style: italic !important;
+    max-width: 600px !important;
+}
+
+.pet-waste-service-container .features-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2d5016;
+    margin-bottom: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pet-waste-service-container .features-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.pet-waste-service-container .features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.pet-waste-service-container .checkmark {
+    width: 30px;
+    height: 30px;
+    background: #4a7c2a;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.pet-waste-service-container .cta-button {
+    background: linear-gradient(45deg, #e8ff1a, #fffb00);
+    color: rgb(21, 68, 19);
+    border: 2px solid rgb(21, 68, 19);
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(74, 124, 42, 0.3);
+    transition: all 0.3s ease;
+    z-index: 5;
+    position: relative;
+}
+
+.pet-waste-service-container .cta-button:hover {
+    transform: translateY(-3px);
+    color: rgb(251, 255, 0);
+    background: linear-gradient(45deg, #57be38, #16b910);
+    border: 2px solid rgb(251, 255, 0);
+    box-shadow: 0 12px 35px rgba(74, 124, 42, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .pet-waste-service-container {
+        min-height: 1400px;
+    }
+    
+    .pet-waste-service-container .main-content .pet-waste-title-line-1,
+    .pet-waste-service-container .main-content .pet-waste-title-line-2 {
+        font-size: 4rem !important;
+    }
+    
+    .pet-waste-service-container .features-title {
+        font-size: 1.6rem !important;
+    }
+    
+    .pet-waste-service-container .main-content {
+        padding: 600px 30px 80px 30px;
+    }
+    
+    .pet-waste-service-container .corgi-container {
+        width: 70%;
+        left: 20px;
+        top: 10px;
+    }
+    
+    .pet-waste-service-container .no-squat-container {
+        top: 50px;
+        right: 10px;
+        width: 35%;
+    }
+    
+    .pet-waste-service-container .sprinkler-container {
+        top: 400px;
+        right: 10px;
+        width: 45%;
+    }
+    
+    .pet-waste-service-container .golden-container {
+        width: 40%;
+        bottom: -30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pet-waste-service-container {
+        min-height: 1200px;
+    }
+    
+    .pet-waste-service-container .main-content .pet-waste-title-line-1,
+    .pet-waste-service-container .main-content .pet-waste-title-line-2 {
+        font-size: 3rem !important;
+    }
+    
+    .pet-waste-service-container .features-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .pet-waste-service-container .main-content {
+        padding: 480px 20px 80px 20px;
+    }
+    
+    .pet-waste-service-container .section-1 {
+        width: 90%;
+        height: 400px;
+    }
+    
+    .pet-waste-service-container .section-2 {
+        width: 80%;
+        height: 350px;
+        top: 200px;
+    }
+    
+    .pet-waste-service-container .corgi-container {
+        top: 10px;
+        left: 10px;
+        width: 60%;
+    }
+    
+    .pet-waste-service-container .no-squat-container {
+        top: 30px;
+        right: 5px;
+        width: 30%;
+    }
+    
+    .pet-waste-service-container .sprinkler-container {
+        top: 280px;
+        right: 5px;
+        width: 40%;
+    }
+    
+    .pet-waste-service-container .golden-container {
+        width: 35%;
+        bottom: -20px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-waste-service-container {
+        min-height: 1000px;
+    }
+    
+    .pet-waste-service-container .main-content .pet-waste-title-line-1,
+    .pet-waste-service-container .main-content .pet-waste-title-line-2 {
+        font-size: 2.2rem !important;
+    }
+    
+    .pet-waste-service-container .features-title {
+        font-size: 1.3rem !important;
+    }
+    
+    .pet-waste-service-container .main-content {
+        padding: 380px 15px 80px 15px;
+    }
+    
+    .pet-waste-service-container .section-1 {
+        width: 95%;
+        height: 300px;
+        top: -30px;
+        left: -50px;
+    }
+    
+    .pet-waste-service-container .section-2 {
+        width: 85%;
+        height: 250px;
+        top: 150px;
+        right: -100px;
+    }
+    
+    .pet-waste-service-container .corgi-container {
+        top: 5px;
+        left: 5px;
+        width: 55%;
+    }
+    
+    .pet-waste-service-container .no-squat-container {
+        top: 20px;
+        right: 2px;
+        width: 25%;
+    }
+    
+    .pet-waste-service-container .sprinkler-container {
+        top: 200px;
+        right: 2px;
+        width: 35%;
+    }
+    
+    .pet-waste-service-container .golden-container {
+        width: 30%;
+        bottom: -10px;
+        right: -10px;
+    }
+    
+    .pet-waste-service-container .bottom-grass-container {
+        height: 200px;
+    }
+}
+
+
+/* ===========================================
+   AGGRESSIVE SPL BLOG CSS - FORCES OVERRIDE
+   Use !important to override existing site styles
+   =========================================== */
+
+/* Main Blog Container - Force Override - WIDER VERSION */
+div.splblog-container,
+.splblog-container {
+    max-width: 1400px !important;  /* Changed from 800px to 1400px */
+    margin: 0 auto !important;
+    padding: 40px 60px !important;  /* Increased side padding from 20px to 60px */
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    line-height: 1.7 !important;
+    color: #333 !important;
+    background: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Typography Hierarchy - Force Override */
+.splblog-container h2.splblog-heading,
+h2.splblog-heading,
+.splblog-heading {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: #2d5a27 !important;
+    margin: 2.5rem 0 1rem 0 !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 3px solid #4a7c59 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: none !important;
+    text-transform: none !important;
+}
+
+.splblog-container h3.splblog-subheading,
+h3.splblog-subheading,
+.splblog-subheading {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: #4a7c59 !important;
+    margin: 2rem 0 1rem 0 !important;
+    border: none !important;
+    background: none !important;
+}
+
+/* Content Sections - Force Override */
+div.splblog-intro,
+.splblog-intro {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+    padding: 2rem !important;
+    border-left: 5px solid #4a7c59 !important;
+    border-radius: 8px !important;
+    margin: 2rem 0 !important;
+    font-size: 1.1rem !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.splblog-container p.splblog-intro-lead,
+p.splblog-intro-lead,
+.splblog-intro-lead {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    color: #2d5a27 !important;
+    margin: 1.5rem 0 !important;
+    line-height: 1.6 !important;
+}
+
+/* Callout Boxes - Force Override */
+div.splblog-callout,
+.splblog-callout {
+    background: #fff3cd !important;
+    border-left: 5px solid #ffc107 !important;
+    padding: 1.5rem !important;
+    margin: 2rem 0 !important;
+    border-radius: 5px !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+div.splblog-callout-success,
+.splblog-callout-success {
+    background: #d4edda !important;
+    border-left: 5px solid #28a745 !important;
+    padding: 1.5rem !important;
+    margin: 2rem 0 !important;
+    border-radius: 5px !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+div.splblog-callout-warning,
+.splblog-callout-warning {
+    background: #f8d7da !important;
+    border-left: 5px solid #dc3545 !important;
+    padding: 1.5rem !important;
+    margin: 2rem 0 !important;
+    border-radius: 5px !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+/* Academic Citations - Force Override */
+div.splblog-citation,
+.splblog-citation {
+    background: #f8f9fa !important;
+    border-left: 4px solid #007bff !important;
+    padding: 1rem 1.5rem !important;
+    margin: 1.5rem 0 !important;
+    border-radius: 0 5px 5px 0 !important;
+    font-style: italic !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.splblog-citation a,
+.splblog-citation a:link,
+.splblog-citation a:visited {
+    color: #007bff !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.splblog-citation a:hover {
+    text-decoration: underline !important;
+    color: #0056b3 !important;
+}
+
+/* Key Stats Box - Force Override (ORIGINAL VERSION) */
+div.splblog-stats,
+.splblog-stats {
+    background: #e8f5e8 !important;
+    border: 2px solid #4a7c59 !important;
+    border-radius: 10px !important;
+    padding: 2rem !important;
+    margin: 2rem 0 !important;
+    text-align: center !important;
+}
+
+.splblog-stats h3,
+.splblog-stats h3.splblog-subheading {
+    color: #2d5a27 !important;
+    margin-top: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
+
+/* VERSION 3 CARD STYLE - NEW ADDITION */
+.splblog-stats-cards {
+    background: #e8f5e8 !important;
+    border: 2px solid #4a7c59 !important;
+    border-radius: 10px !important;
+    padding: 2rem !important;
+    margin: 2rem 0 !important;
+    text-align: center !important;
+}
+
+.splblog-stats-cards h3 {
+    color: #2d5a27 !important;
+    margin-top: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+    margin-bottom: 1rem !important;
+}
+
+.splblog-stats-cards p {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    color: #666 !important;
+    font-size: 1rem !important;
+}
+
+.splblog-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+}
+
+.splblog-advantage-card {
+    background: white !important;
+    border: 2px solid #4a7c59 !important;
+    border-radius: 10px !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    transition: transform 0.3s ease !important;
+    cursor: default !important;
+}
+
+.splblog-advantage-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+}
+
+.splblog-advantage-card .fa-seedling {
+    color: #28a745 !important;
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+}
+
+.splblog-advantage-card h4 {
+    color: #2d5a27 !important;
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    border: none !important;
+    background: none !important;
+}
+
+.splblog-advantage-card p {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Table Styling - Force Override */
+table.splblog-table,
+.splblog-table {
+    margin: 2rem 0 !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+    background: white !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    border: none !important;
+}
+
+.splblog-table th {
+    background: #4a7c59 !important;
+    color: white !important;
+    padding: 1rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    border: none !important;
+}
+
+.splblog-table td {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: white !important;
+}
+
+.splblog-table tr:nth-child(even) td {
+    background-color: #f8f9fa !important;
+}
+
+/* Blockquote - Force Override */
+div.splblog-quote,
+.splblog-quote,
+.splblog-container blockquote {
+    background: #f8f9fa !important;
+    border-left: 5px solid #4a7c59 !important;
+    margin: 2rem 0 !important;
+    padding: 1.5rem 2rem !important;
+    border-radius: 0 8px 8px 0 !important;
+    font-style: italic !important;
+    font-size: 1.1rem !important;
+    color: #2d5a27 !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.splblog-quote cite {
+    display: block !important;
+    margin-top: 1rem !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    color: #4a7c59 !important;
+}
+
+/* CTA Section - Force Override */
+div.splblog-cta,
+.splblog-cta {
+    background: linear-gradient(135deg, #4a7c59, #2d5a27) !important;
+    color: white !important;
+    padding: 2rem !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    margin: 3rem 0 !important;
+    border: none !important;
+}
+
+.splblog-cta h3 {
+    color: white !important;
+    margin-top: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
+
+/* Custom CTA Text Class - White Text */
+.splblog-cta-text {
+    color: white !important;
+    font-size: 1rem !important;
+    margin: 1rem 0 !important;
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    line-height: 1.7 !important;
+}
+
+/* CTA Buttons - Match Front Page Style */
+a.splblog-button,
+.splblog-button {
+    display: inline-block !important;
+    background: #9ACD32 !important;  /* Lime green like your front page */
+    color: #333 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    margin: 0.5rem !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    font-size: 1rem !important;
+}
+
+.splblog-button:hover {
+    background: #FFD700 !important;  /* Yellow on hover like your front page */
+    transform: translateY(-2px) !important;
+    text-decoration: none !important;
+    color: #333 !important;
+}
+
+/* Content Paragraphs - Force Override */
+.splblog-container p.splblog-text,
+p.splblog-text,
+.splblog-text {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin: 1.5rem 0 !important;
+    color: #444 !important;
+}
+
+/* Image Styling - Force Override */
+img.splblog-image,
+.splblog-image {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin: 2rem auto !important;
+    display: block !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.splblog-container p.splblog-caption,
+p.splblog-caption,
+.splblog-caption {
+    text-align: center !important;
+    font-style: italic !important;
+    color: #666 !important;
+    font-size: 0.9rem !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Lists - Force Override */
+ul.splblog-list,
+.splblog-list {
+    margin: 1.5rem 0 !important;
+    padding-left: 2rem !important;
+    list-style-type: disc !important;
+}
+
+.splblog-list li {
+    margin: 0.5rem 0 !important;
+    line-height: 1.6 !important;
+    color: #444 !important;
+}
+
+/* Utility Classes - Force Override */
+.splblog-center { 
+    text-align: center !important; 
+}
+
+.splblog-bold { 
+    font-weight: 600 !important; 
+}
+
+.splblog-green { 
+    color: #4a7c59 !important; 
+}
+
+.splblog-margin-top { 
+    margin-top: 3rem !important; 
+}
+
+.splblog-margin-bottom { 
+    margin-bottom: 3rem !important; 
+}
+
+/* Mobile Responsive - Force Override - UPDATED FOR WIDER DESIGN */
+@media (max-width: 1500px) {
+    .splblog-container {
+        max-width: 95% !important;
+        padding: 40px 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .splblog-container {
+        padding: 20px 15px !important;
+        max-width: 100% !important;
+    }
+    
+    .splblog-heading {
+        font-size: 1.5rem !important;
+    }
+    
+    .splblog-intro,
+    .splblog-callout,
+    .splblog-callout-success,
+    .splblog-callout-warning,
+    .splblog-stats,
+    .splblog-stats-cards {
+        padding: 1.5rem !important;
+    }
+    
+    .splblog-table {
+        font-size: 0.9rem !important;
+    }
+    
+    .splblog-table th,
+    .splblog-table td {
+        padding: 0.5rem !important;
+    }
+    
+    .splblog-button {
+        display: block !important;
+        margin: 0.5rem 0 !important;
+    }
+    
+    /* Mobile Cards */
+    .splblog-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .splblog-advantage-card {
+        padding: 1.2rem !important;
+    }
+    
+    .splblog-advantage-card .fa-seedling {
+        font-size: 1.5rem !important;
+    }
+}
