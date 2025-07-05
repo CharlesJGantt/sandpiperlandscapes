@@ -1,0 +1,30 @@
+uuid: 6e28cfb8-cb7a-4ecc-a9e7-65671a4e886a
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c89d6a8d-975b-4fe9-aa2e-f309f63ffe3d'
+  module:
+    - block_content
+    - system
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_servicescards
+theme: sandpiper_landscapes
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:c89d6a8d-975b-4fe9-aa2e-f309f63ffe3d'
+settings:
+  id: 'block_content:c89d6a8d-975b-4fe9-aa2e-f309f63ffe3d'
+  label: 'Services Cards'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

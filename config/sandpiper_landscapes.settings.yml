@@ -20,10 +20,10 @@ form_corner_style: mt-style-form-global
 image_corner_style: mt-style-image-global
 menu_corner_style: mt-style-menu-global
 custom_elements_corner_style: mt-style-custom-global
-color_scheme: red
-links_style: mt-link-style-normal
-page_container_border: 0
-animations_state: 0
+color_scheme: green
+links_style: mt-link-style-animated-underline-1
+page_container_border: 1
+animations_state: 1
 background_pattern: none
 slideout_background_color: region--bright-background
 slideout_side: right
@@ -45,7 +45,7 @@ header_layout_container: container
 header_background_color: region--accent-background
 fixed_header: 1
 fixed_header_behavior: fixed-header-enabled--scroll-up
-header_blocks_paddings: 0
+header_blocks_paddings: 1
 header_region_paddings: 1
 header_horizontal_paddings: 1
 header_background_image_state: 0

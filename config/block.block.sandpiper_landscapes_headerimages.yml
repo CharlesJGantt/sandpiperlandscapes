@@ -1,15 +1,18 @@
 uuid: a245f41c-8702-4f67-9ad2-602d5a5ae487
 langcode: en
-status: true
+status: false
 dependencies:
+  content:
+    - 'block_content:basic:5f5898bf-8897-46a3-8579-ee175622a51c'
   module:
+    - block_content
     - system
   theme:
     - sandpiper_landscapes
 id: sandpiper_landscapes_headerimages
 theme: sandpiper_landscapes
-region: banner
-weight: -5
+region: content
+weight: -4
 provider: null
 plugin: 'block_content:5f5898bf-8897-46a3-8579-ee175622a51c'
 settings:

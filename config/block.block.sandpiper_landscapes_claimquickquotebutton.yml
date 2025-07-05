@@ -2,6 +2,10 @@ uuid: dc5534b3-2287-4296-9638-bcded91fc5de
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:de3d8d35-f61b-4980-8c0d-b1dbb73b847b'
+  module:
+    - block_content
   theme:
     - sandpiper_landscapes
 id: sandpiper_landscapes_claimquickquotebutton

@@ -5,7 +5,7 @@ dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 1
+uid: null
 template: false
 archive: false
 id: submit_a_quick_quote
@@ -17,20 +17,22 @@ elements: |-
     '#type': fieldset
     '#title': 'General Information'
     '#attributes':
-      class:
-        - .row
+      class: ['mb-4', 'p-3', 'bg-light', 'rounded', 'form-section']
     name:
       '#type': textfield
       '#title': 'Name:'
       '#required': true
+      '#attributes': { class: ['form-control'] }
     email_address:
       '#type': email
       '#title': 'Email Address'
       '#required': true
+      '#attributes': { class: ['form-control'] }
     phone_number:
       '#type': tel
       '#title': 'Phone Number'
       '#required': true
+      '#attributes': { class: ['form-control'] }
     service_address:
       '#type': webform_address
       '#title': 'Service Address'
@@ -38,23 +40,26 @@ elements: |-
       '#city__required': true
       '#postal_code__required': true
       '#required': true
+      '#attributes': { class: ['form-control'] }
     neighborhood_or_community_name:
       '#type': textfield
       '#title': 'Neighborhood or Community Name'
+      '#attributes': { class: ['form-control'] }
+
   horizontal_rule:
     '#type': webform_horizontal_rule
     '#display_on': both
-  additional_informaion:
+
+  additional_information:
     '#type': fieldset
-    '#title': 'Additional Informaion'
+    '#title': 'Additional Information'
     '#attributes':
-      class:
-        - .row
+      class: ['mb-4', 'p-3', 'bg-light', 'rounded', 'addon-service-wrapper']
     requested_service_day:
       '#type': checkboxes
       '#title': 'Requested Service Day'
       '#multiple': 2
-      '#description': '<p>Please choose the day you would ideally like service performed on. Note that while we try to accommodate customers with their requested service days, this is not always possible due to routing and schedule density. &nbsp;</p>'
+      '#description': '<p>Please choose the day you would ideally like service performed on. Note that while we try to accommodate customers with their requested service days, this is not always possible due to routing and schedule density.</p>'
       '#options':
         Monday: Monday
         Tuesday: Tuesday
@@ -64,194 +69,135 @@ elements: |-
         'Any Day Is Fine': 'Any Day Is Fine'
       '#options_display': side_by_side
       '#required': true
+      '#attributes': { class: ['form-control'] }
+
     i_would_like_to_add_these_add_on_services_check_all_that_apply:
-      '#type': checkboxes
+      '#type': container
       '#title': 'I Would Like To Add These Add-On Services (Check all that apply)'
-      '#description': '<p>Select any of these add-on services you are interested in adding onto your service plan. Additional fees will apply, and will be confirmed via email before any additional work/charges is made.&nbsp;</p>'
+      '#description': '<p>Select any of these add-on services you are interested in adding onto your service plan. Additional fees will apply, and will be confirmed via email before any additional work/charges is made.</p>'
       '#description_display': before
-      '#options':
-        'Pet Waste Cleanup': 'Pet Waste Cleanup -- We pickup and remove pet waste from your yard on every service visit.  Special Price Is Located On Flyer.'
-        'Mulch Bed Refresh': 'Mulch Bed Refresh -- We refresh your mulch beds by cleaning them of debris, leaves, and weeds, then refreshing with a layer of fresh much. Special Price Is Located On Flyer.'
-        'Spring Cleanup': 'Spring Cleanup -- Spring cleanup includes a thorough removal of leaves, branches, and winter debris, plus an initial mow to freshen up your lawn and prepare it for the growing season. Special Price Is Located On Flyer.'
-        'Once Per Month Hedge Trimming': 'Once Per Month Hedge Trimming -- We trim your hedges once per month to keep them looking fresh. Height Limit of 6-feet, and a 20-hedge maximum. Special Quick Quote Price: $35 Per Month. '
-        'Irrigation System Inspection': |-
-          Irrigation System Inspection -- A full walkthrough of your irrigation system to check for leaks, coverage issues, or performance problems before peak season begins.
-          Quick Quote Special Price: $40 One Time
-        'Weak or Dead Lawn Patch Repair': |-
-          Weak or Dead Lawn Patch Repair -- We’ll remove damaged turf, prep the soil, and reseed or patch problem areas to help your lawn recover faster.
-          Quick Quote Special Price: $10 per square foot
+      pet_waste_cleanup:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Pet Waste Cleanup'
+          '#return_value': 'pet_waste_cleanup'
+        description:
+          '#type': markup
+          '#markup': '<p>We pickup and remove pet waste from your yard on every service visit. Special Price Is Located On Flyer.</p>'
+      mulch_bed_refresh:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Mulch Bed Refresh'
+          '#return_value': 'mulch_bed_refresh'
+        description:
+          '#type': markup
+          '#markup': '<p>We refresh your mulch beds by cleaning them of debris, leaves, and weeds, then refreshing with a layer of fresh mulch. Special Price Is Located On Flyer.</p>'
+      spring_cleanup:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Spring Cleanup'
+          '#return_value': 'spring_cleanup'
+        description:
+          '#type': markup
+          '#markup': '<p>Includes a thorough removal of leaves, branches, and winter debris, plus an initial mow to freshen up your lawn and prepare it for the growing season. Special Price Is Located On Flyer.</p>'
+      once_per_month_hedge_trimming:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Once Per Month Hedge Trimming'
+          '#return_value': 'once_per_month_hedge_trimming'
+        description:
+          '#type': markup
+          '#markup': '<p>We trim your hedges once per month to keep them looking fresh. Height limit of 6 feet and a 20-hedge max. Quick Quote: $35/mo.</p>'
+      irrigation_system_inspection:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Irrigation System Inspection'
+          '#return_value': 'irrigation_system_inspection'
+        description:
+          '#type': markup
+          '#markup': '<p>Full walkthrough of your irrigation system for leaks, coverage, or performance issues. Quick Quote Price: $40 one time.</p>'
+      weak_or_dead_lawn_patch_repair:
+        '#type': container
+        '#attributes':
+          class: ['addon-service', 'mb-3']
+        checkbox:
+          '#type': checkbox
+          '#title': 'Weak or Dead Lawn Patch Repair'
+          '#return_value': 'weak_or_dead_lawn_patch_repair'
+        description:
+          '#type': markup
+          '#markup': '<p>We''ll remove damaged turf, prep the soil, and reseed patch areas to help recovery. Quick Quote: $10/sq ft.</p>'
+
   horizontal_rule_01:
     '#type': webform_horizontal_rule
     '#display_on': both
+
   door_hanger_flyer_photos:
     '#type': fieldset
     '#title': 'Door Hanger / Flyer Photos'
+    '#attributes':
+      class: ['mb-4', 'p-3', 'bg-light', 'rounded', 'form-section']
     door_hanger_flyer_front:
       '#type': webform_image_file
       '#title': 'Door Hanger / Flyer Front'
-      '#description': '<p>Upload a photo of the front of the door hanger / flyer.&nbsp;</p>'
+      '#description': '<p>Upload a photo of the front of the door hanger / flyer.</p>'
       '#required': true
       '#sanitize': true
     door_hanger_flyer_back:
       '#type': webform_image_file
       '#title': 'Door Hanger / Flyer Back'
-      '#description': '<p>Upload a photo of the back of the door hanger / flyer</p>'
+      '#description': '<p>Upload a photo of the back of the door hanger / flyer.</p>'
       '#required': true
+
   horizontal_rule_02:
     '#type': webform_horizontal_rule
+
   approval_and_form_submission:
     '#type': fieldset
     '#title': 'Approval and Form Submission'
-    approve_this_quick_quote_or_request_more_information:
-      '#type': checkboxes
+    '#attributes':
+      class: ['mb-4', 'p-3', 'bg-light', 'rounded', 'form-section']
+    approval_decision:
+      '#type': radios
       '#title': 'Approve This Quick Quote or Request More Information'
-      '#multiple': 2
-      '#options':
-        'I Approve! ': 'I Approve!  -- I approve the quick quote at the price written on my door hanger / flyer. Please add me to the schedule!'
-        'I Need More Information': 'I Need More Information -- Please contact me with with more information. '
       '#required': true
+      '#options':
+        approve: 'I Approve!'
+        request_info: 'I Need More Information'
+      '#attributes':
+        class: ['approval-choice']
+      '#title_display': before
+      '#description_display': before
+
     terms_of_service:
       '#type': webform_terms_of_service
       '#title': 'I have read and agree to the {Terms of Service}, including the conditions related to Quick Quote pricing and limited-time offers.'
       '#required': true
       '#terms_title': 'Terms and Conditions'
-      '#terms_content': '<h2>&nbsp;</h2><p><strong>Effective Date:</strong> 01/01/2025</p><p>Welcome to the Sandpiper Landscapes website. By accessing or using this site, you agree to comply with and be bound by the following terms and conditions. If you do not agree with these terms, please do not use the site.</p><h2>1. Use of the Website</h2><p>This website is intended for informational and service-request purposes only. You may browse, request a quote, submit contact forms, or learn more about our services. All content is the property of Sandpiper Landscapes and may not be copied, modified, or reused without our written permission.</p><h2>2. Quotes and Service Requests</h2><p>Any quote request submitted through the site does not constitute a binding agreement. All quotes are subject to verification and approval by our team. We reserve the right to decline any service request at our discretion.</p><h2>3. Quick Quotes and Special Offer Pricing</h2><p>Sandpiper Landscapes may distribute promotional flyers or door hangers containing Quick Quote pricing customized to your property. Quick Quotes typically include pricing for core services such as weekly or bi-weekly mowing, property cleanup, pet waste removal, and fresh mulch installation. Optional add-on services such as hedge trimming, irrigation inspection, or lawn patch repair may be included at special discounted rates.</p><p>All Quick Quote prices are valid for 30 calendar days from the date the flyer was received. Pricing is specific to the listed property and may not be transferred or applied to other addresses.</p><p>Submitting a Quick Quote form through this website does not constitute a binding agreement. All submissions are reviewed by our team and are subject to confirmation. Final acceptance and scheduling of services require completion of the onboarding process, including payment method setup and acceptance of a formal service agreement.</p><p>Special pricing for add-on services is only available at the time of Quick Quote submission and may not be honored after onboarding is complete.</p><h2>4. Accuracy of Information</h2><p>We make every effort to ensure that the content on this website is accurate and up to date. However, Sandpiper Landscapes does not guarantee that all information is free from errors or omissions. Pricing, service availability, and descriptions are subject to change without notice.</p><h2>5. Payments and Billing</h2><p>All payments for services are handled through our secure CRM platform. No financial data is collected or stored on this website. Payment terms and service agreements are governed by separate contracts between Sandpiper Landscapes and its clients.</p><h2>6. Privacy</h2><p>By using this site, you agree to the terms outlined in our <a href="/privacy">Privacy Policy</a>. We collect limited personal information through website forms, which is used only for communication, scheduling, and quoting services. We do not sell or share personal data.</p><h2>7. Cookies and Analytics</h2><p>This site uses cookies and traffic analytics tools to improve functionality and performance. By using the site, you consent to the use of these technologies.</p><h2>8. Links to Other Websites</h2><p>This website may contain links to external sites (e.g., Google Forms, social media platforms). Sandpiper Landscapes is not responsible for the content, privacy practices, or terms of use on those external sites.</p><h2>9. Intellectual Property</h2><p>All logos, text, graphics, and other content are owned by Sandpiper Landscapes unless otherwise stated. Unauthorized use may violate copyright, trademark, or other laws.</p><h2>10. Limitation of Liability</h2><p>Sandpiper Landscapes is not liable for any damages resulting from the use or inability to use this website or its content. This includes, without limitation, indirect or consequential damages.</p><h2>11. Changes to These Terms</h2><p>We reserve the right to update these terms at any time. Changes will be effective immediately upon posting. It is your responsibility to review this page periodically for any updates.</p><h2>12. Contact Information</h2><p>If you have questions about these terms, please contact us through our website’s contact form.</p>'
+      '#terms_content': '<p><strong>Effective Date:</strong> 01/01/2025</p><p>Welcome to the Sandpiper Landscapes website. By accessing or using this site, you agree to comply with and be bound by the following terms and conditions. If you do not agree with these terms, please do not use the site.</p><h2>1. Use of the Website</h2><p>This website is intended for informational and service-request purposes only. All content is property of Sandpiper Landscapes and may not be copied without permission.</p><h2>2. Quotes</h2><p>Submitting a Quick Quote form does not constitute a binding agreement. Quotes are subject to verification and approval. Special pricing is only valid for 30 days.</p><h2>3. Privacy</h2><p>We collect limited personal information used only for communication and quoting. See our <a href="/privacy">Privacy Policy</a>.</p><h2>4. Payments</h2><p>All payments are handled securely through our CRM and governed by our service agreement.</p><h2>5. Contact</h2><p>Questions? Contact us through our <a href="/contact">contact form</a>.</p>'
 css: ''
 javascript: ''
 settings:
   ajax: false
-  ajax_scroll_top: form
-  ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
   page: true
-  page_submit_path: ''
-  page_confirm_path: ''
-  page_theme_name: ''
   form_title: source_entity_webform
-  form_submit_once: false
-  form_open_message: ''
-  form_close_message: ''
-  form_exception_message: ''
-  form_previous_submissions: true
-  form_confidential: false
-  form_confidential_message: ''
-  form_disable_remote_addr: false
-  form_convert_anonymous: false
-  form_prepopulate: false
-  form_prepopulate_source_entity: false
-  form_prepopulate_source_entity_required: false
-  form_prepopulate_source_entity_type: ''
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
-  form_disable_autocomplete: false
-  form_novalidate: false
-  form_disable_inline_errors: false
   form_required: false
-  form_autofocus: false
-  form_details_toggle: false
-  form_reset: false
-  form_access_denied: default
-  form_access_denied_title: ''
-  form_access_denied_message: ''
-  form_access_denied_attributes: {  }
-  form_file_limit: '50 MB'
-  form_attributes: {  }
-  form_method: ''
-  form_action: ''
-  share: false
-  share_node: false
-  share_theme_name: ''
-  share_title: true
-  share_page_body_attributes: {  }
-  submission_label: ''
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_log: false
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
-  submission_views: {  }
-  submission_views_replace: {  }
-  submission_user_columns: {  }
-  submission_user_duplicate: false
-  submission_access_denied: default
-  submission_access_denied_title: ''
-  submission_access_denied_message: ''
-  submission_access_denied_attributes: {  }
-  previous_submission_message: ''
-  previous_submissions_message: ''
-  autofill: false
-  autofill_message: ''
-  autofill_excluded_elements: {  }
-  wizard_progress_bar: true
-  wizard_progress_pages: false
-  wizard_progress_percentage: false
-  wizard_progress_link: false
-  wizard_progress_states: false
-  wizard_start_label: ''
-  wizard_preview_link: false
-  wizard_confirmation: true
-  wizard_confirmation_label: ''
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
-  wizard_track: ''
-  wizard_prev_button_label: ''
-  wizard_next_button_label: ''
-  wizard_toggle: false
-  wizard_toggle_show_label: ''
-  wizard_toggle_hide_label: ''
-  wizard_page_type: container
-  wizard_page_title_tag: h2
-  preview: 0
-  preview_label: ''
-  preview_title: ''
-  preview_message: ''
-  preview_attributes: {  }
-  preview_excluded_elements: {  }
-  preview_exclude_empty: true
-  preview_exclude_empty_checkbox: false
-  draft: none
-  draft_multiple: false
-  draft_auto_save: false
-  draft_saved_message: ''
-  draft_loaded_message: ''
-  draft_pending_single_message: ''
-  draft_pending_multiple_message: ''
   confirmation_type: page
-  confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
-  confirmation_attributes: {  }
-  confirmation_back: true
-  confirmation_back_label: ''
-  confirmation_back_attributes: {  }
-  confirmation_exclude_query: false
-  confirmation_exclude_token: false
-  confirmation_update: false
-  limit_total: null
-  limit_total_interval: null
-  limit_total_message: ''
-  limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
-  limit_user_message: ''
-  limit_user_unique: false
-  entity_limit_total: null
-  entity_limit_total_interval: null
-  entity_limit_user: null
-  entity_limit_user_interval: null
-  purge: none
-  purge_days: null
-  results_disabled: false
-  results_disabled_ignore: false
-  results_customize: false
-  token_view: false
-  token_update: false
-  token_delete: false
-  serial_disabled: false
 access:
   create:
     roles:

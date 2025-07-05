@@ -11,7 +11,7 @@ _core:
 id: sandpiper_landscapes_content
 theme: sandpiper_landscapes
 region: content
-weight: -14
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

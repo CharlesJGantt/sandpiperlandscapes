@@ -13,7 +13,7 @@ _core:
 id: sandpiper_landscapes_tools
 theme: sandpiper_landscapes
 region: hidden_blocks_collection
-weight: -23
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -2,6 +2,8 @@ uuid: ba669cbc-59f6-4894-b966-a6d0a7dfb202
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - sandpiper_landscapes
 _core:
@@ -9,7 +11,7 @@ _core:
 id: sandpiper_landscapes_page_title
 theme: sandpiper_landscapes
 region: content
-weight: -15
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/home"
