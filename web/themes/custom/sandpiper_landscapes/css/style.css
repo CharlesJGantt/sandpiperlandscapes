@@ -1892,6 +1892,7 @@ div.splblog-cta,
     margin: 1rem 0 !important;
     font-family: "Nunito Sans", Arial, sans-serif !important;
     line-height: 1.7 !important;
+    text-align: left !important;
 }
 
 /* CTA Buttons - Match Front Page Style */
@@ -1955,6 +1956,12 @@ ul.splblog-list,
     margin: 1.5rem 0 !important;
     padding-left: 2rem !important;
     list-style-type: disc !important;
+}
+
+ol.splblog-list {
+    margin: 1.5rem 0 !important;
+    padding-left: 2rem !important;
+    list-style-type: decimal !important;
 }
 
 .splblog-list li {
@@ -2038,4 +2045,157 @@ ul.splblog-list,
     .splblog-advantage-card .fa-seedling {
         font-size: 1.5rem !important;
     }
+}
+
+/* ===========================================
+   FAQ CARDS COMPONENT - NEW ADDITION TO SPL BLOG CSS
+   Add this to the existing sandpiper-landscapes-blog.css file
+   =========================================== */
+
+/* FAQ Cards Container */
+.splblog-faq-cards {
+  margin: 2rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+/* Individual FAQ Card */
+.splblog-faq-card {
+  background: white !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.splblog-faq-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* FAQ Question Styling */
+.splblog-faq-question {
+  background: linear-gradient(135deg, #4a7c59, #2d5a27) !important;
+  color: white !important;
+  padding: 1.2rem 1.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  position: relative !important;
+  border: none !important;
+}
+
+.splblog-faq-question::after {
+  content: "+" !important;
+  position: absolute !important;
+  right: 1.5rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* FAQ Answer Styling */
+.splblog-faq-answer {
+  padding: 1.5rem !important;
+  background: #f8f9fa !important;
+  border-top: 1px solid #e9ecef !important;
+  margin: 0 !important;
+}
+
+.splblog-faq-answer .splblog-text {
+  margin: 0 !important;
+  color: #444 !important;
+  line-height: 1.6 !important;
+}
+
+/* Interactive States (Optional - for future JavaScript enhancement) */
+.splblog-faq-card.active .splblog-faq-question::after {
+  transform: translateY(-50%) rotate(45deg) !important;
+}
+
+.splblog-faq-card.collapsed .splblog-faq-answer {
+  display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .splblog-faq-question {
+      padding: 1rem 1.2rem !important;
+      font-size: 1rem !important;
+  }
+  
+  .splblog-faq-answer {
+      padding: 1.2rem !important;
+  }
+  
+  .splblog-faq-question::after {
+      right: 1.2rem !important;
+  }
+}
+
+/* Accessibility Improvements */
+.splblog-faq-question:focus {
+  outline: 2px solid #9ACD32 !important;
+  outline-offset: 2px !important;
+}
+
+.splblog-faq-question:hover {
+  background: linear-gradient(135deg, #5a8c69, #3d6a37) !important;
+}
+
+/* FAQ Cards Integration with Existing Blog Styles */
+.splblog-container .splblog-faq-cards {
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+}
+
+/* Alternative FAQ Card Style (for variety in different blogs) */
+.splblog-faq-cards.style-bordered .splblog-faq-card {
+  border: 2px solid #4a7c59 !important;
+  border-radius: 10px !important;
+}
+
+.splblog-faq-cards.style-bordered .splblog-faq-question {
+  background: #e8f5e8 !important;
+  color: #2d5a27 !important;
+  border-bottom: 1px solid #4a7c59 !important;
+}
+
+.splblog-faq-cards.style-bordered .splblog-faq-question::after {
+  color: #4a7c59 !important;
+}
+
+.splblog-faq-cards.style-bordered .splblog-faq-answer {
+  background: white !important;
+  border-top: none !important;
+}
+
+/* Compact FAQ Style (for shorter questions) */
+.splblog-faq-cards.style-compact .splblog-faq-question {
+  padding: 0.8rem 1.2rem !important;
+  font-size: 0.95rem !important;
+}
+
+.splblog-faq-cards.style-compact .splblog-faq-answer {
+  padding: 1rem 1.2rem !important;
+}
+
+/* Large FAQ Style (for detailed answers) */
+.splblog-faq-cards.style-large .splblog-faq-question {
+  padding: 1.5rem 2rem !important;
+  font-size: 1.1rem !important;
+}
+
+.splblog-faq-cards.style-large .splblog-faq-answer {
+  padding: 2rem !important;
+}
+
+.splblog-faq-cards.style-large .splblog-faq-answer .splblog-text {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
 }
