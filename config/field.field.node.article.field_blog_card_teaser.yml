@@ -1,0 +1,24 @@
+uuid: b946d3d5-697a-4e51-8463-adc1bb696f38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_card_teaser
+    - filter.format.basic_html
+    - node.type.article
+  module:
+    - text
+id: node.article.field_blog_card_teaser
+field_name: field_blog_card_teaser
+entity_type: node
+bundle: article
+label: 'Blog Card Teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

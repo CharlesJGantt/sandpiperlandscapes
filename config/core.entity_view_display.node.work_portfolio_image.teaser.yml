@@ -1,0 +1,36 @@
+uuid: 43b1f78d-ba57-43e5-8e23-d9dc5a94b6d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.work_portfolio_image.body
+    - field.field.node.work_portfolio_image.field_service_category
+    - field.field.node.work_portfolio_image.field_work_image
+    - field.field.node.work_portfolio_image.field_work_portfolio_hero_image
+    - node.type.work_portfolio_image
+  module:
+    - text
+    - user
+id: node.work_portfolio_image.teaser
+targetEntityType: node
+bundle: work_portfolio_image
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_service_category: true
+  field_work_image: true
+  field_work_portfolio_hero_image: true

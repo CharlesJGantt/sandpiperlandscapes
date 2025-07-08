@@ -1,0 +1,184 @@
+uuid: 3b847e7d-0d5d-4fd2-8ed3-8f97e1b6ff31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_card_teaser
+    - field.storage.node.field_teaser_image
+    - image.style.large
+  module:
+    - image
+    - node
+    - text
+    - user
+id: front_page_blog_teasers
+label: 'Front Page Blog Teasers'
+module: views
+description: 'Displays a block of blog teasers for the homepage'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Our Latest Blog Posts'
+      fields:
+        field_teaser_image:
+          id: field_teaser_image
+          table: node__field_teaser_image
+          field: field_teaser_image
+          plugin_id: field
+          label: ''
+          type: image
+          settings:
+            image_link: content
+            image_style: large
+            image_loading:
+              attribute: lazy
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: ''
+          type: string
+          settings:
+            link_to_entity: true
+        field_blog_card_teaser:
+          id: field_blog_card_teaser
+          table: node__field_blog_card_teaser
+          field: field_blog_card_teaser
+          plugin_id: field
+          label: ''
+          type: text_default
+          settings: {  }
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 6
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          value: '1'
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          value:
+            - article
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+      use_ajax: true
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_blog_card_teaser'
+        - 'config:field.storage.node.field_teaser_image'
+  block_1:
+    id: block_1
+    display_title: 'Front Page Blog Teasers'
+    display_plugin: block
+    position: 1
+    display_options:
+      defaults:
+        pager: true
+        style: true
+        row: true
+        fields: true
+        sorts: true
+        filters: true
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'Blog teaser list for homepage'
+      block_category: Custom
+      label: 'Blog Teasers'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_blog_card_teaser'
+        - 'config:field.storage.node.field_teaser_image'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: blog
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_blog_card_teaser'
+        - 'config:field.storage.node.field_teaser_image'

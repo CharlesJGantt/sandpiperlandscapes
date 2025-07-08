@@ -1,0 +1,24 @@
+uuid: 4a8686a7-eea1-4af5-8e21-8229b98469a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.work_portfolio_image
+  module:
+    - text
+id: node.work_portfolio_image.body
+field_name: body
+entity_type: node
+bundle: work_portfolio_image
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -3048,3 +3048,112 @@ div.splblog-howto,
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
+
+
+/* Work Portfolio Gallery Styles */
+
+/* Grid container styling */
+.views-view-grid.horizontal.cols-3.clearfix {
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Individual grid column styling */
+.views-view-grid .views-col {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* Work portfolio image wrapper */
+.work-port-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+/* Work portfolio image styling */
+.work-port-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+/* Hover effects */
+.work-port-img-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.work-port-img-wrapper:hover .work-port-img {
+  transform: scale(1.05);
+}
+
+/* Optional: Add a subtle overlay on hover */
+.work-port-img-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.work-port-img-wrapper:hover::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure images maintain aspect ratio */
+.work-port-img-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Remove default margins and add consistent spacing */
+.views-field.views-field-field-work-image {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .views-view-grid .views-col {
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+  
+  .work-port-img-wrapper {
+    border-radius: 8px;
+  }
+  
+  .work-port-img,
+  .work-port-img-wrapper img {
+    border-radius: 8px;
+  }
+  
+  .work-port-img-wrapper img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .views-view-grid.horizontal.cols-3.clearfix {
+    gap: 15px;
+    padding: 15px 0;
+  }
+  
+  .work-port-img-wrapper img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 9efd684f-5a7e-440c-a865-366dbb1e9896
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_portfolio_hero_image
+    - node.type.work_portfolio_image
+id: node.work_portfolio_image.field_work_portfolio_hero_image
+field_name: field_work_portfolio_hero_image
+entity_type: node
+bundle: work_portfolio_image
+label: 'Work Portfolio Hero Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Is Hero Image'
+  off_label: 'Is Not Hero Image'
+field_type: boolean

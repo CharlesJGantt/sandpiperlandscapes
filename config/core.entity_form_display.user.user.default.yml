@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_author_bio
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - path
+    - text
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -21,6 +24,16 @@ content:
   contact:
     weight: 5
     region: content
+  field_author_bio:
+    type: text_textarea_with_summary
+    weight: 31
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   language:
     weight: 0
     region: content

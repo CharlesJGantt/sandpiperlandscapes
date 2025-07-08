@@ -1,0 +1,29 @@
+uuid: c85fb4e1-b8e5-4a22-95b6-0a43b31d3d7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_category
+    - node.type.work_portfolio_image
+    - taxonomy.vocabulary.service_categories
+id: node.work_portfolio_image.field_service_category
+field_name: field_service_category
+entity_type: node
+bundle: work_portfolio_image
+label: 'Service Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      service_categories: service_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

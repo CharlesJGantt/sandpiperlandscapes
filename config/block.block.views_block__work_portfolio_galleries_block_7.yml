@@ -1,0 +1,24 @@
+uuid: 558abee7-3bd4-47da-8a36-829f147ba4e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.work_portfolio_galleries
+  module:
+    - views
+  theme:
+    - sandpiper_landscapes
+id: views_block__work_portfolio_galleries_block_7
+theme: sandpiper_landscapes
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:work_portfolio_galleries-block_7'
+settings:
+  id: 'views_block:work_portfolio_galleries-block_7'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
