@@ -1,0 +1,28 @@
+{#
+ * Custom blog teaser grid card for block_1 of the front_page_blog_teasers View.
+ * Requires: Show = Fields, Format = Unformatted list.
+#}
+<figure class="spl-blog-teaser-card">
+  <div class="spl-blog-teaser-card__image">
+    {{ fields.field_teaser_image.content }}
+  </div>
+
+  <div class="spl-blog-teaser-card__content">
+    <h3 class="spl-blog-teaser-card__title">
+      <a href="{{ fields.title.url }}" class="spl-blog-teaser-card__link">
+        {{ fields.title.content }}
+      </a>
+    </h3>
+
+    <div class="spl-blog-teaser-card__summary">
+      {{ fields.field_blog_card_teaser.content }}
+    </div>
+
+    <a href="{{ fields.title.url }}" class="spl-blog-teaser-card__read-more">Read More</a>
+  </div>
+
+  <div class="spl-blog-teaser-card__icon">
+    <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+    <span class="visually-hidden">Blog teaser icon</span>
+  </div>
+</figure>
