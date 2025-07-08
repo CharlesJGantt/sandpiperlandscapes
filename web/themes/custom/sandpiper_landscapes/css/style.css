@@ -3094,24 +3094,6 @@ div.splblog-howto,
   transform: scale(1.05);
 }
 
-/* Optional: Add a subtle overlay on hover */
-.work-port-img-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.3s ease;
-  z-index: 1;
-  border-radius: 12px;
-}
-
-.work-port-img-wrapper:hover::before {
-  background: rgba(0, 0, 0, 0.1);
-}
-
 /* Ensure images maintain aspect ratio */
 .work-port-img-wrapper img {
   width: 100%;

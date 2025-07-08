@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_work_image
-    - image.style.large
     - taxonomy.vocabulary.service_categories
   content:
     - 'taxonomy_term:service_categories:077ceba5-0377-477e-9572-a710400b1aa6'
@@ -18,7 +17,7 @@ dependencies:
     - 'taxonomy_term:service_categories:b080c8d4-26af-4910-9177-9d33a20a62f7'
     - 'taxonomy_term:service_categories:bcc406dd-a938-4b84-b032-4d175dec69ab'
   module:
-    - image
+    - colorbox
     - node
     - taxonomy
     - user
@@ -87,12 +86,15 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: colorbox
           settings:
-            image_link: content
-            image_style: large
-            image_loading:
-              attribute: lazy
+            colorbox_image_style: ''
+            colorbox_gallery: post
+            colorbox_gallery_custom: ''
+            colorbox_caption: none
+            colorbox_caption_custom: ''
+            colorbox_node_style: ''
+            colorbox_node_style_first: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -845,6 +847,7 @@ display:
           limit: true
           error_message: true
       defaults:
+        fields: true
         filters: false
       display_extenders: {  }
     cache_metadata:

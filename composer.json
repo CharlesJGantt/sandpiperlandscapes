@@ -20,6 +20,7 @@
         "drupal/basecore": "^1.0",
         "drupal/bootstrap_business": "^2.0",
         "drupal/bootstrap_layout_builder": "^2.2",
+        "drupal/colorbox": "^2.1",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
