@@ -1,0 +1,169 @@
+{#
+/**
+ * @file
+ * Template for Blog Landing Page Featured Grid (1-5)
+ * Creates a 3-column hero layout: 30% left (2 teasers), 40% center (1 hero), 30% right (2 teasers)
+ * 
+ * Available variables:
+ * - rows: Each row contains view result data
+ * - view: The view object
+ * - options: Display options
+ * 
+ * Usage: Save as views-view-unformatted--blog-landing-page-elements--featured-grid-block.html.twig
+ */
+#}
+
+<div class="spl-blog-hero-grid-container">
+  
+  {# Left Column - Blogs 2 & 3 (30% width) #}
+  <div class="spl-blog-hero-left-column">
+    
+    {# Blog 2 - Top Left Teaser #}
+    {% if rows[1] %}
+      <div class="spl-blog-hero-side-teaser spl-blog-hero-side-teaser--top">
+        <div class="spl-blog-hero-side-teaser__image">
+          {{ view.style_plugin.getField(1, 'field_teaser_image') }}
+        </div>
+        <div class="spl-blog-hero-side-teaser__content">
+          <h3 class="spl-blog-hero-side-teaser__title">
+            {{ view.style_plugin.getField(1, 'title') }}
+          </h3>
+          <div class="spl-blog-hero-side-teaser__summary">
+            {{ view.style_plugin.getField(1, 'field_blog_card_teaser') }}
+          </div>
+          <div class="spl-blog-hero-side-teaser__date">
+            {{ view.style_plugin.getField(1, 'created') }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+    {# Blog 3 - Bottom Left Teaser #}
+    {% if rows[2] %}
+      <div class="spl-blog-hero-side-teaser spl-blog-hero-side-teaser--bottom">
+        <div class="spl-blog-hero-side-teaser__image">
+          {{ view.style_plugin.getField(2, 'field_teaser_image') }}
+        </div>
+        <div class="spl-blog-hero-side-teaser__content">
+          <h3 class="spl-blog-hero-side-teaser__title">
+            {{ view.style_plugin.getField(2, 'title') }}
+          </h3>
+          <div class="spl-blog-hero-side-teaser__summary">
+            {{ view.style_plugin.getField(2, 'field_blog_card_teaser') }}
+          </div>
+          <div class="spl-blog-hero-side-teaser__date">
+            {{ view.style_plugin.getField(2, 'created') }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+  </div>
+
+  {# Center Column - Blog 1 Hero (40% width) #}
+  <div class="spl-blog-hero-center-column">
+    {% if rows[0] %}
+      <div class="spl-blog-hero-featured">
+        <div class="spl-blog-hero-featured__image">
+          {{ view.style_plugin.getField(0, 'field_teaser_image') }}
+        </div>
+        <div class="spl-blog-hero-featured__overlay">
+          <div class="spl-blog-hero-featured__content">
+            <h2 class="spl-blog-hero-featured__title">
+              {{ view.style_plugin.getField(0, 'title') }}
+            </h2>
+            <div class="spl-blog-hero-featured__summary">
+              {{ view.style_plugin.getField(0, 'field_blog_card_teaser') }}
+            </div>
+            <div class="spl-blog-hero-featured__date">
+              {{ view.style_plugin.getField(0, 'created') }}
+            </div>
+            <div class="spl-blog-hero-featured__read-more">
+              {% set title_field = view.style_plugin.getField(0, 'title') %}
+              {% if title_field %}
+                {# Extract URL from the rendered title link #}
+                {% set title_html = title_field|render|trim %}
+                {% if 'href=' in title_html %}
+                  {% set url_start = title_html|split('href="')[1]|split('"')[0] %}
+                  <a href="{{ url_start }}" class="spl-blog-hero-read-more-btn">
+                    Read Full Article
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                {% else %}
+                  <a href="#" class="spl-blog-hero-read-more-btn">
+                    Read Full Article
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {# Right Column - Blogs 4 & 5 (30% width) #}
+  <div class="spl-blog-hero-right-column">
+    
+    {# Blog 4 - Top Right Teaser #}
+    {% if rows[3] %}
+      <div class="spl-blog-hero-side-teaser spl-blog-hero-side-teaser--top">
+        <div class="spl-blog-hero-side-teaser__image">
+          {{ view.style_plugin.getField(3, 'field_teaser_image') }}
+        </div>
+        <div class="spl-blog-hero-side-teaser__content">
+          <h3 class="spl-blog-hero-side-teaser__title">
+            {{ view.style_plugin.getField(3, 'title') }}
+          </h3>
+          <div class="spl-blog-hero-side-teaser__summary">
+            {{ view.style_plugin.getField(3, 'field_blog_card_teaser') }}
+          </div>
+          <div class="spl-blog-hero-side-teaser__date">
+            {{ view.style_plugin.getField(3, 'created') }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+    {# Blog 5 - Bottom Right Teaser #}
+    {% if rows[4] %}
+      <div class="spl-blog-hero-side-teaser spl-blog-hero-side-teaser--bottom">
+        <div class="spl-blog-hero-side-teaser__image">
+          {{ view.style_plugin.getField(4, 'field_teaser_image') }}
+        </div>
+        <div class="spl-blog-hero-side-teaser__content">
+          <h3 class="spl-blog-hero-side-teaser__title">
+            {{ view.style_plugin.getField(4, 'title') }}
+          </h3>
+          <div class="spl-blog-hero-side-teaser__summary">
+            {{ view.style_plugin.getField(4, 'field_blog_card_teaser') }}
+          </div>
+          <div class="spl-blog-hero-side-teaser__date">
+            {{ view.style_plugin.getField(4, 'created') }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+  </div>
+
+</div>
+
+{# Fallback message if no blogs found #}
+{% if rows|length == 0 %}
+  <div class="spl-blog-hero-empty">
+    <p>No blog posts available at this time.</p>
+  </div>
+{% endif %}
+
+{# DEBUG: Remove this section once everything is working #}
+{# 
+<div style="background: yellow; padding: 20px; margin: 20px; font-family: monospace;">
+  <h3>DEBUG: Field Output Test</h3>
+  <p><strong>Row 0 Title:</strong> {{ view.style_plugin.getField(0, 'title') }}</p>
+  <p><strong>Row 0 Image:</strong> {{ view.style_plugin.getField(0, 'field_teaser_image') }}</p>
+  <p><strong>Row 0 Summary:</strong> {{ view.style_plugin.getField(0, 'field_blog_card_teaser') }}</p>
+  <p><strong>Row 0 Date:</strong> {{ view.style_plugin.getField(0, 'created') }}</p>
+</div>
+#}

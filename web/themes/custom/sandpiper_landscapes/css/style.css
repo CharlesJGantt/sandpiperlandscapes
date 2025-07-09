@@ -3139,3 +3139,898 @@ div.splblog-howto,
     height: 180px;
   }
 }
+
+/* ===========================================
+   SPL PORTFOLIO SHOWCASE - CUSTOM HYBRID HEADER STYLE
+   =========================================== */
+
+   .spl-portfolio-showcase {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+    margin: 2rem 0 !important;
+    padding: 1rem !important;
+}
+
+.spl-portfolio-item-wrapper {
+    background: linear-gradient(135deg, #2e5737, #4a7c59) !important; /* Gradient body background */
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    border: 2px solid #e9ecef !important;
+}
+
+.spl-portfolio-item-wrapper:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    border-color: #4a7c59 !important;
+    background: linear-gradient(135deg, #3d6a47, #5a8c69) !important; /* Lighter gradient on hover */
+}
+
+/* Style the H2 element specifically - WHITE BACKGROUND */
+.spl-portfolio-item-wrapper h2 {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #2d5a27 !important; /* Dark green text */
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important; /* White background */
+    border-bottom: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* Professional shadow */
+    position: relative !important;
+}
+
+/* Lime to yellow gradient line from Option 3 */
+.spl-portfolio-item-wrapper h2::before {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #9ACD32, #FFD700) !important; /* Lime to yellow gradient */
+}
+
+/* Expanding white accent line (over the gradient line) */
+.spl-portfolio-item-wrapper h2::after {
+    content: "" !important;
+    display: block !important;
+    width: 100px !important;
+    height: 4px !important;
+    background: rgba(255, 255, 255, 0.9) !important; /* White expanding line */
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) scaleX(0) !important;
+    transition: transform 0.3s ease !important;
+    z-index: 2 !important;
+    border-radius: 2px !important;
+}
+
+.spl-portfolio-item-wrapper:hover h2::after {
+    transform: translateX(-50%) scaleX(1) !important;
+}
+
+/* Style the link inside the H2 */
+.spl-portfolio-item-wrapper h2 .spl-portfolio-item {
+    display: block !important;
+    text-decoration: none !important;
+    color: #2d5a27 !important; /* Dark green text */
+    padding: 1.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.spl-portfolio-item-wrapper:hover h2 .spl-portfolio-item {
+    color: #4a7c59 !important; /* Lighter green on hover */
+}
+
+/* Enhanced shadow on hover */
+.spl-portfolio-item-wrapper:hover h2 {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Image container styles - 7:5 ASPECT RATIO */
+.spl-portfolio-image-container {
+    overflow: hidden !important;
+    position: relative !important;
+    background: white !important;
+    aspect-ratio: 7/5 !important;
+}
+
+/* Image link wrapper - HIGHER Z-INDEX */
+.spl-portfolio-image-container .spl-portfolio-item {
+    display: block !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 5 !important; /* Higher than overlay, lower than icons */
+}
+
+/* Image styles - ASPECT RATIO CONTROLLED */
+.spl-portfolio-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+}
+
+.spl-portfolio-item-wrapper:hover .spl-portfolio-image {
+    transform: scale(1.05) !important;
+}
+
+/* Service Icon Styling - HIGHEST Z-INDEX BUT NON-BLOCKING */
+.spl-portfolio-service-icon {
+    position: absolute !important;
+    bottom: 0.5rem !important;
+    right: 0.5rem !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-size: 56px !important;
+    color: #9ACD32 !important; /* Default color (overridden per icon) */
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
+    transform-origin: bottom center !important;
+    z-index: 10 !important;
+    pointer-events: none !important; /* This ensures icons don't block clicks */
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    /* NO TRANSITION HERE - Let animation handle it */
+}
+
+/* Individual icon content - BRIGHTER COLORS, YELLOW HEDGE TRIMMING */
+.spl-portfolio-service-icon.seedling::before {
+    content: "\f4d8"; /* fa-seedling unicode */
+}
+.spl-portfolio-service-icon.seedling {
+    color: #7CB342 !important; /* Keep darker green for seedling */
+}
+
+.spl-portfolio-service-icon.droplet::before {
+    content: "\f043"; /* fa-droplet unicode */
+}
+.spl-portfolio-service-icon.droplet {
+    color: #00fff2 !important; /* Keep stronger blue for water droplet */
+}
+
+.spl-portfolio-service-icon.pagelines::before {
+    content: "\f18c"; /* fa-pagelines unicode (Font Awesome Brands) */
+}
+.spl-portfolio-service-icon.pagelines {
+    color: #FFD700 !important; /* Bright yellow for pagelines */
+    font-family: "Font Awesome 6 Brands" !important; /* Brands font family */
+    font-weight: 400 !important; /* Brands use normal weight */
+}
+
+.spl-portfolio-service-icon.trash::before {
+    content: "\f2ed"; /* fa-trash-can unicode */
+}
+.spl-portfolio-service-icon.trash {
+    color: #FF5722 !important; /* Brighter orange for trash can */
+}
+
+/* Icon Bounce Animation - SIMPLIFIED AND WORKING */
+.spl-portfolio-item-wrapper:hover .spl-portfolio-service-icon {
+    animation: spl-portfolio-icon-bounce 0.6s ease-in-out forwards !important;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.9)) !important;
+}
+
+@keyframes spl-portfolio-icon-bounce {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    30% {
+        transform: scale(1.25) translateY(-12px);
+    }
+    60% {
+        transform: scale(1.1) translateY(4px);
+    }
+    100% {
+        transform: scale(1.15) translateY(0);
+    }
+}
+
+/* Subtle overlay on hover - LOWER Z-INDEX */
+.spl-portfolio-image-container::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(74, 124, 89, 0) !important;
+    transition: background 0.3s ease !important;
+    pointer-events: none !important;
+    z-index: 1 !important; /* Lower z-index than image link */
+}
+
+.spl-portfolio-item-wrapper:hover .spl-portfolio-image-container::after {
+    background: rgba(74, 124, 89, 0.1) !important;
+}
+
+/* Mobile Responsive - Updated for clean icons */
+@media (max-width: 768px) {
+    .spl-portfolio-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 0.5rem !important;
+    }
+
+    .spl-portfolio-item-wrapper h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .spl-portfolio-item-wrapper h2 .spl-portfolio-item {
+        padding: 1.2rem 0.8rem 0.8rem 0.8rem !important;
+    }
+
+    .spl-portfolio-service-icon {
+        font-size: 42px !important; /* Adjusted for mobile */
+        bottom: 0.8rem !important;
+        right: 0.8rem !important;
+    }
+}
+
+/* Accessibility */
+.spl-portfolio-item-wrapper:focus-within {
+    outline: 3px solid #9ACD32 !important;
+    outline-offset: 2px !important;
+}
+
+/* Force override with higher specificity if needed */
+div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper,
+.region-content .spl-portfolio-showcase .spl-portfolio-item-wrapper,
+.field--type-text-with-summary .spl-portfolio-showcase .spl-portfolio-item-wrapper {
+    background: linear-gradient(135deg, #2e5737, #4a7c59) !important; /* Gradient body background */
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    border: 2px solid #e9ecef !important;
+}
+
+div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
+.region-content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
+.field--type-text-with-summary .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    border-color: #4a7c59 !important;
+    background: linear-gradient(135deg, #3d6a47, #5a8c69) !important; /* Lighter gradient on hover */
+}
+
+/* =========================================================================================================
+--------------------------------Portfolio Landing Page Content Styling ----------------------------------
+==========================================================================================================*/
+
+/* Portfolio Landing Page Content Styling */
+.portfolio-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2rem;
+  font-family: "Nunito Sans", Arial, sans-serif;
+}
+
+.portfolio-intro-lead {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d5a27;
+  margin: 2rem 0 2rem 0;
+  line-height: 1.5;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+  padding: 2.5rem 1rem;
+  border: 2px solid #4a7c59;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.15);
+  position: relative;
+}
+
+.portfolio-intro-lead::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #9ACD32, #FFD700);
+  border-radius: 0 0 10px 10px;
+}
+
+.portfolio-browse-text {
+  text-align: center;
+  font-style: italic;
+  color: #4a7c59;
+  margin: 1rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .portfolio-content-wrapper {
+      padding: 0 1rem;
+      max-width: 100%;
+  }
+  
+  .portfolio-intro-lead {
+      font-size: 1.2rem;
+      padding: 2rem 1.5rem;
+      margin: 1.5rem 0;
+  }
+  
+  .portfolio-browse-text {
+      font-size: 1.1rem;
+      padding: 1.2rem;
+  }
+}
+
+
+
+
+/* Target the work portfolio gallery specifically */
+.view-work-portfolio-galleries .views-view-grid {
+  max-width: 1000px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Or target by the block ID if it's more specific */
+.block-views-blockwork-portfolio-galleries-block-hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .view-work-portfolio-galleries .views-view-grid {
+      padding: 0 1rem;
+  }
+}
+
+
+
+/* ===========================================
+   SPL BLOG HERO GRID - 3 COLUMN FEATURED LAYOUT
+   Displays 5 blogs: 30% left (2 teasers), 40% center (1 hero), 30% right (2 teasers)
+   Compatible with existing SPL Blog CSS framework
+   =========================================== */
+
+/* Main Hero Grid Container */
+.spl-blog-hero-grid-container {
+  display: grid !important;
+  grid-template-columns: 30% 40% 30% !important;
+  gap: 1.5rem !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1) !important;
+  height: 1000px !important;
+  overflow: hidden !important;
+}
+
+/* ===========================================
+ LEFT & RIGHT COLUMNS - SIDE TEASERS (30% each)
+ =========================================== */
+
+.spl-blog-hero-left-column,
+.spl-blog-hero-right-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  height: 100% !important;
+}
+
+/* Individual Side Teaser Cards */
+.spl-blog-hero-side-teaser {
+  background: white !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important; /* Enhanced drop shadow */
+  transition: all 0.3s ease !important;
+  height: 40% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
+  position: relative !important;
+}
+
+.spl-blog-hero-side-teaser:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 30px rgba(74, 124, 89, 0.2) !important;
+  border-color: #4a7c59 !important;
+}
+
+/* Side Teaser Image */
+.spl-blog-hero-side-teaser__image {
+  height: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.spl-blog-hero-side-teaser__image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.spl-blog-hero-side-teaser:hover .spl-blog-hero-side-teaser__image img {
+  transform: scale(1.05) !important;
+}
+
+/* Side Teaser Content - Overlaid on image, aligned to bottom */
+.spl-blog-hero-side-teaser__content {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  background: none !important;
+  margin-bottom: 0 !important; /* Removed margin to align with image bottom */
+}
+
+.spl-blog-hero-side-teaser__title {
+  font-size: 1rem !important;
+  font-weight: 650 !important;
+  color: white !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important; /* Changed from 2 to 3 lines */
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  background: rgba(23, 82, 5, 0.8) !important;
+  padding: 1rem 1.2rem 15px 1.2rem !important; /* Top: 1rem, Right/Left: 1.2rem, Bottom: 5px */
+  border-radius: 0 !important;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  text-align: center !important;
+}
+
+.spl-blog-hero-side-teaser__title a {
+  color: white !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.spl-blog-hero-side-teaser__title a:hover {
+  color: #9ACD32 !important;
+}
+
+.spl-blog-hero-side-teaser__summary {
+  display: none !important;
+}
+
+.spl-blog-hero-side-teaser__date {
+  display: block !important;
+  position: absolute !important;
+  top: -14rem !important;
+  left: 0.8rem !important;
+  z-index: 3 !important;
+
+  background: rgba(23, 82, 5, 0.6) !important;
+  color: #fff !important;
+  font-size: 0.7rem !important;
+  font-weight: bold !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 12px !important;
+  text-transform: uppercase !important;
+  pointer-events: none !important;
+}
+
+
+/* ===========================================
+ CENTER COLUMN - FEATURED HERO (40%)
+ =========================================== */
+
+.spl-blog-hero-center-column {
+  height: 100% !important;
+  position: relative !important;
+}
+
+.spl-blog-hero-featured {
+  height: 100% !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2) !important; /* Enhanced drop shadow */
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  border: 3px solid transparent !important;
+  max-height: 760px !important; /* Remove max-height to fill completely */
+}
+
+.spl-blog-hero-featured:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 45px rgba(74, 124, 89, 0.25) !important;
+  border-color: #4a7c59 !important;
+}
+
+/* Featured Hero Image */
+.spl-blog-hero-featured__image {
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+  max-height: 800px !important; /* Remove max-height to fill completely */
+}
+
+.spl-blog-hero-featured__image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.5s ease !important;
+  max-height: none !important; /* Remove max-height to fill completely */
+}
+
+.spl-blog-hero-featured:hover .spl-blog-hero-featured__image img {
+  transform: scale(1.03) !important;
+}
+
+/* Featured Hero Date - Positioned at top of image */
+.spl-blog-hero-featured__date {
+  position: absolute !important;
+  top: -27rem !important;
+  left: 1.3rem !important;
+  font-size: 0.85rem !important;
+  color: white !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  background: rgba(23, 82, 5, 0.6) !important; /* Keep your green background */
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  z-index: 3 !important;
+}
+
+/* Featured Hero Title - Positioned at top of image */
+.spl-blog-hero-featured__title {
+  position: absolute !important;
+  top: -23.6rem !important; /* Keep your positioning */
+  left: -33px !important; /* Changed from .1rem to 0 for full width */
+  right: -33px !important; /* Changed from 1.8rem to 0 for full width */
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: rgb(255, 255, 255) !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  background: rgba(23, 82, 5, 0.6) !important; /* Keep your green background */
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.596) !important; /* Keep your text shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important; /* Fixed box shadow direction */
+  padding: 1rem 1.5rem !important; /* Add padding for better spacing */
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  z-index: 3 !important;
+  text-align: center !important; /* Center the text in the full-width background */
+}
+
+.spl-blog-hero-featured__title a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.spl-blog-hero-featured__title a:hover {
+  color: #9ACD32 !important;
+}
+
+/* Featured Hero Overlay - More transparent with box shadow */
+.spl-blog-hero-featured__overlay {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(0, 0, 0, 0.3) !important; /* More transparent */
+  padding: .8rem !important;
+  color: white !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.466) !important; /* Box shadow for overlay */
+}
+
+/* Featured Content */
+.spl-blog-hero-featured__content {
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+.spl-blog-hero-featured__summary {
+  font-size: 1.1rem !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  line-height: 1.5 !important;
+  margin-bottom: 1.5rem !important;
+  margin-left: .75rem !important;
+  margin-right: .75rem !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.671) !important;
+}
+
+/* Featured Read More Button */
+.spl-blog-hero-featured__read-more {
+  margin-top: auto !important;
+}
+
+.spl-blog-hero-read-more-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: linear-gradient(135deg, #3ad825, #8bc34a) !important;
+  color: #333 !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 25px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(156, 205, 50, 0.3) !important;
+}
+
+.spl-blog-hero-read-more-btn:hover {
+  background: linear-gradient(135deg, #FFD700, #f0c800) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+  color: #222 !important;
+}
+
+.spl-blog-hero-read-more-btn i {
+  transition: transform 0.3s ease !important;
+}
+
+.spl-blog-hero-read-more-btn:hover i {
+  transform: translateX(3px) !important;
+}
+
+/* ===========================================
+ RESPONSIVE DESIGN
+ =========================================== */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .spl-blog-hero-grid-container {
+      grid-template-columns: 35% 30% 35% !important;
+      gap: 1rem !important;
+      padding: 1.5rem !important;
+      height: 750px !important;
+  }
+  
+  .spl-blog-hero-featured__title {
+      font-size: 1.3rem !important;
+      top: 2.2rem !important; /* Adjusted for tablet */
+  }
+  
+  .spl-blog-hero-featured__date {
+      top: 1.2rem !important;
+  }
+  
+  .spl-blog-hero-side-teaser__title {
+      font-size: 0.95rem !important;
+  }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+  .spl-blog-hero-grid-container {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto auto auto !important;
+      gap: 1.5rem !important;
+      padding: 1rem !important;
+      height: auto !important;
+  }
+  
+  .spl-blog-hero-left-column,
+  .spl-blog-hero-right-column {
+      order: 2 !important;
+      flex-direction: row !important;
+      gap: 1rem !important;
+      height: auto !important;
+  }
+  
+  .spl-blog-hero-center-column {
+      order: 1 !important;
+      height: 350px !important;
+  }
+  
+  .spl-blog-hero-side-teaser {
+      height: 200px !important;
+      width: 50% !important;
+      flex-direction: row !important;
+  }
+  
+  .spl-blog-hero-side-teaser__image {
+      height: 100% !important;
+      width: 40% !important;
+  }
+  
+  .spl-blog-hero-side-teaser__content {
+      height: 100% !important;
+      width: 60% !important;
+      padding: 0.8rem !important;
+      position: relative !important;
+      margin-bottom: 0 !important;
+  }
+  
+  .spl-blog-hero-side-teaser__title {
+      background: none !important;
+      color: #2d5a27 !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      text-align: left !important;
+  }
+  
+  .spl-blog-hero-side-teaser__title a {
+      color: #2d5a27 !important;
+  }
+  
+  .spl-blog-hero-side-teaser__title a:hover {
+      color: #4a7c59 !important;
+  }
+  
+  .spl-blog-hero-featured__title {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      font-size: 1.3rem !important;
+  }
+  
+  .spl-blog-hero-featured__date {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+  }
+  
+  .spl-blog-hero-featured__overlay {
+      height: 65% !important;
+      padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)) !important;
+      box-shadow: none !important;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .spl-blog-hero-grid-container {
+      padding: 0.8rem !important;
+      gap: 1rem !important;
+  }
+  
+  .spl-blog-hero-left-column,
+  .spl-blog-hero-right-column {
+      flex-direction: column !important;
+  }
+  
+  .spl-blog-hero-side-teaser {
+      width: 100% !important;
+      height: 150px !important;
+      flex-direction: row !important;
+  }
+  
+  .spl-blog-hero-center-column {
+      height: 280px !important;
+  }
+  
+  .spl-blog-hero-featured__title {
+      font-size: 1.1rem !important;
+  }
+  
+  .spl-blog-hero-featured__overlay {
+      padding: 1.5rem 1rem 1rem 1rem !important;
+  }
+  
+  .spl-blog-hero-read-more-btn {
+      padding: 0.6rem 1.2rem !important;
+      font-size: 0.8rem !important;
+  }
+}
+
+/* ===========================================
+ ACCESSIBILITY & FALLBACKS
+ =========================================== */
+
+/* Focus States */
+.spl-blog-hero-side-teaser:focus-within,
+.spl-blog-hero-featured:focus-within {
+  outline: 3px solid #9ACD32 !important;
+  outline-offset: 2px !important;
+}
+
+.spl-blog-hero-read-more-btn:focus {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 2px !important;
+}
+
+/* Empty State */
+.spl-blog-hero-empty {
+  grid-column: 1 / -1 !important;
+  text-align: center !important;
+  padding: 3rem !important;
+  color: #666 !important;
+  font-style: italic !important;
+  font-size: 1.1rem !important;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .spl-blog-hero-featured__overlay {
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)) !important;
+  }
+  
+  .spl-blog-hero-side-teaser,
+  .spl-blog-hero-featured {
+      border-width: 3px !important;
+      border-color: #333 !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .spl-blog-hero-side-teaser,
+  .spl-blog-hero-featured,
+  .spl-blog-hero-side-teaser__image img,
+  .spl-blog-hero-featured__image img,
+  .spl-blog-hero-read-more-btn {
+      transition: none !important;
+      transform: none !important;
+  }
+  
+  .spl-blog-hero-side-teaser:hover,
+  .spl-blog-hero-featured:hover {
+      transform: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .spl-blog-hero-grid-container {
+      grid-template-columns: 1fr 1fr 1fr !important;
+      gap: 1rem !important;
+      box-shadow: none !important;
+      background: white !important;
+      page-break-inside: avoid !important;
+  }
+  
+  .spl-blog-hero-featured__overlay {
+      background: rgba(255, 255, 255, 0.9) !important;
+      color: #333 !important;
+  }
+  
+  .spl-blog-hero-read-more-btn {
+      display: none !important;
+  }
+}
