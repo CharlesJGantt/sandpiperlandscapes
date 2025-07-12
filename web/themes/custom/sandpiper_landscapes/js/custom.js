@@ -1,11 +1,27 @@
 /**
  * Bootstrap 3 Blog Category Accordion
  * Updated for Bootstrap 3 compatibility with smooth transitions
+ * Includes Drupal Layout Builder protection
  */
 (function($) {
     'use strict';
     
     $(document).ready(function() {
+        // Don't run in Layout Builder context
+        if ($('body').hasClass('layout-builder-form') || 
+            $('body').hasClass('path-layout-builder') ||
+            window.location.pathname.includes('/layout_builder/') ||
+            window.location.pathname.includes('layout_builder')) {
+            console.log('Layout Builder detected - skipping blog accordion JS');
+            return;
+        }
+        
+        // Only run on pages that actually have the blog category accordion
+        if ($('#expandableCategories').length === 0) {
+            console.log('Blog accordion element not found - skipping initialization');
+            return;
+        }
+        
         console.log('Bootstrap 3 blog accordion initializing...');
         
         // Bootstrap 3 collapse events

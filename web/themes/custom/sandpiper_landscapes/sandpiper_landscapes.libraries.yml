@@ -4,7 +4,6 @@ global-styling:
       https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css: { type: external }
       css/style.css: {}
   js:
-    https://code.jquery.com/jquery-3.6.0.min.js: { type: external }
     https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js: { type: external }
     js/sandpiper-landscapes.js: {}
     js/custom.js: {}

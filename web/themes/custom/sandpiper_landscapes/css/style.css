@@ -1663,7 +1663,7 @@ h2.splblog-heading::after,
 h3.splblog-subheading,
 .splblog-subheading {
     font-family: "Nunito Sans", Arial, sans-serif !important;
-    font-size: 1.8rem !important;
+    font-size: 2.4rem !important;
     font-weight: 600 !important;
     color: #4a7c59 !important;
     margin: 2rem 0 1rem 0 !important;
@@ -4173,7 +4173,7 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 
 /* Main wrapper for the blog category accordion */
 .spl-blog-category-grid-wrapper {
-  max-width: 1200px !important;
+  max-width: 800px !important;
   margin: 2rem auto !important;
   padding: 2rem !important;
   position: relative !important;
@@ -4183,7 +4183,7 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* Top row - always visible */
 .spl-blog-category-top-row {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 1.5rem !important;
   margin-bottom: 2rem !important;
 }
@@ -4191,14 +4191,14 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* Expandable section - general layout */
 .spl-blog-category-expandable {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 1.5rem !important;
   margin-top: 1rem !important;
 }
 
 .spl-blog-category-expandable.collapse {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 1.5rem !important;
   margin-top: 1rem !important;
   max-height: 0 !important;
@@ -5050,3 +5050,384 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
   }
 }
 
+
+/* CSS-only collapse functionality */
+.spl-category-checkbox {
+  display: none !important;
+}
+
+.spl-category-checkbox:checked ~ .spl-blog-category-expandable {
+  max-height: 3000px !important;
+  overflow: visible !important;
+}
+
+.spl-category-checkbox:not(:checked) ~ .spl-blog-category-expandable {
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.spl-category-checkbox:checked + .spl-category-toggle .toggle-text:after {
+  content: "Show Fewer Categories";
+}
+
+.spl-category-checkbox:checked + .spl-category-toggle .toggle-icon {
+  transform: rotate(180deg);
+}
+
+
+/* ===========================================
+   BLOG CATEGORY CAROUSEL - 100% UNIQUE SPL CLASSES
+   Bootstrap-Compatible Version — Fixed Arrows
+   =========================================== */
+
+/* Main carousel wrapper */
+.spl-blog-category-carousel-wrapper {
+  max-width: 1200px !important;
+  margin: 2rem auto !important;
+  padding: 2rem !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Custom carousel container */
+.spl-carousel {
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+  position: relative !important;
+}
+
+/* Inner carousel container */
+.spl-carousel-inner {
+  padding: 2rem 1rem !important;
+  min-height: 400px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Carousel items */
+.spl-carousel-item {
+  display: none !important;
+  width: 100% !important;
+  transition: transform 0.6s ease-in-out !important;
+}
+.spl-carousel-item-active,
+.spl-carousel-item.active {
+  display: block !important;
+}
+
+/* 4 cards per row */
+.spl-blog-category-slide-row {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  padding: 0 3rem !important;
+}
+
+/* Card styles */
+.spl-blog-category-carousel-wrapper .spl-blog-category-card {
+  position: relative !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer !important;
+}
+
+.spl-blog-category-carousel-wrapper .spl-blog-category-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25) !important;
+}
+
+.spl-blog-category-carousel-wrapper .spl-blog-category-image {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: linear-gradient(135deg, #4a7c59, #2d5a27) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+}
+
+.spl-blog-category-carousel-wrapper .spl-blog-category-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-image img {
+  transform: scale(1.1) !important;
+}
+
+/* Content area */
+.spl-blog-category-carousel-wrapper .spl-blog-category-content {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)) !important;
+  padding: 2rem 1rem 1rem 1rem !important;
+  z-index: 2 !important;
+}
+.spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-content {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9)) !important;
+}
+
+/* Content wrapper now controls the background and full bottom bar */
+.spl-blog-category-carousel-wrapper .spl-blog-category-content {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(23, 82, 5, 0.5) !important;
+  padding: 0 !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 60px !important;
+}
+
+/* Title element */
+.spl-blog-category-carousel-wrapper .spl-blog-category-title {
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  color: white !important;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.705) !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Anchor inside the title */
+.spl-blog-category-carousel-wrapper .spl-blog-category-title a {
+  color: white !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  display: block !important;
+  padding: 0.75rem 1rem !important; /* Vertical padding only */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+}
+
+.spl-blog-category-carousel-wrapper .spl-blog-category-title a:hover {
+  color: #9ACD32 !important;
+}
+.spl-blog-category-carousel-wrapper .spl-blog-category-title a:focus {
+  outline: 2px solid #4a7c59 !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+/* ===========================================
+   BLOG CATEGORY CAROUSEL - SPL STYLING
+   Custom Chevron Arrow Positioning
+   =========================================== */
+
+.spl-blog-category-carousel-wrapper .carousel-control {
+  background: none !important;
+  border: none !important;
+  color: #4a7c59 !important;
+  font-size: 2.8rem !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  z-index: 25 !important;
+  width: auto !important;
+  height: auto !important;
+  position: absolute !important;
+  top: 35% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0px !important;
+}
+
+/* Left arrow inside the carousel */
+.spl-blog-category-carousel-wrapper .carousel-control.left {
+  left: 15px !important;
+}
+
+/* Right arrow just 5px past the last card */
+.spl-blog-category-carousel-wrapper .carousel-control.right {
+  right: auto !important;
+  left: calc(100% - 3rem) !important;
+  margin-left: 5px !important;
+}
+
+/* Chevron icon itself */
+.spl-blog-category-carousel-wrapper .carousel-control .glyphicon {
+  font-size: 2.8rem !important;
+  font-weight: bold !important;
+  color: #4a7c59 !important;
+  display: inline-block !important;
+}
+
+/* Hover state */
+.spl-blog-category-carousel-wrapper .carousel-control:hover .glyphicon {
+  color: #9acd32 !important;
+}
+
+/* Hide glyphicons from screen readers */
+.spl-blog-category-carousel-wrapper .carousel-control .sr-only {
+  display: none !important;
+}
+
+/* Hide any existing FontAwesome arrow styling */
+.spl-blog-category-carousel-wrapper .carousel-control::before {
+  display: none !important;
+}
+
+/* Screen reader text */
+.spl-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Indicators */
+.spl-carousel-indicators {
+  position: absolute !important;
+  bottom: -50px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 15 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  display: flex !important;
+  gap: 10px !important;
+}
+.spl-carousel-indicators li {
+  border: 2px solid #4a7c59 !important;
+  background-color: transparent !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+.spl-carousel-indicators .spl-indicator-active,
+.spl-carousel-indicators li.active {
+  background-color: #4a7c59 !important;
+}
+.spl-carousel-indicators li:hover {
+  background-color: #9ACD32 !important;
+  border-color: #9ACD32 !important;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 900px) {
+  .spl-blog-category-slide-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
+    padding: 0 2rem !important;
+  }
+  .spl-blog-category-carousel-wrapper {
+    padding: 1.5rem !important;
+    max-width: 800px !important;
+  }
+  .spl-carousel-inner {
+    min-height: 350px !important;
+  }
+  .spl-blog-category-carousel-wrapper .spl-blog-category-title {
+    font-size: 0.9rem !important;
+  }
+  .spl-blog-category-carousel-wrapper .carousel-control.left {
+    left: 10px !important;
+  }
+  .spl-blog-category-carousel-wrapper .carousel-control.right {
+    left: calc(100% - 2.5rem) !important;
+    margin-left: 5px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .spl-blog-category-slide-row {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 1rem !important;
+  }
+  .spl-blog-category-carousel-wrapper {
+    padding: 1rem !important;
+    margin: 1rem auto !important;
+    max-width: 100% !important;
+  }
+  .spl-carousel-inner {
+    padding: 1.5rem 0.5rem !important;
+    min-height: 300px !important;
+  }
+  .spl-blog-category-carousel-wrapper .spl-blog-category-title {
+    font-size: 0.85rem !important;
+    line-height: 1.15 !important;
+  }
+  .spl-carousel-indicators {
+    display: none !important;
+  }
+  .spl-carousel-arrow {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .spl-carousel-arrow-left::before,
+  .spl-carousel-arrow-right::before {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spl-blog-category-carousel-wrapper {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Accessibility */
+.spl-blog-category-carousel-wrapper .spl-blog-category-card:focus-within {
+  outline: 3px solid #9ACD32 !important;
+  outline-offset: 2px !important;
+}
+.spl-carousel-control-left:focus,
+.spl-carousel-control-right:focus {
+  outline: 3px solid #9ACD32 !important;
+  outline-offset: 2px !important;
+}
+@media (prefers-contrast: high) {
+  .spl-blog-category-carousel-wrapper .spl-blog-category-card {
+    border: 3px solid #000 !important;
+  }
+  .spl-carousel-arrow {
+    border: 2px solid #000 !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spl-blog-category-carousel-wrapper .spl-blog-category-card,
+  .spl-blog-category-carousel-wrapper .spl-blog-category-image img,
+  .spl-carousel-arrow,
+  .spl-carousel-item {
+    transition: none !important;
+  }
+  .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover {
+    transform: none !important;
+  }
+  .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-image img {
+    transform: none !important;
+  }
+}
