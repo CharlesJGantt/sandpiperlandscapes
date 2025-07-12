@@ -9,7 +9,7 @@ _core:
 id: sandpiper_landscapes_local_actions
 theme: sandpiper_landscapes
 region: content
-weight: -6
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

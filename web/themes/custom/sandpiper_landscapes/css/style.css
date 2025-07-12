@@ -5101,7 +5101,7 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* Inner carousel container */
 .spl-carousel-inner {
   padding: 2rem 1rem !important;
-  min-height: 400px !important;
+  min-height: 200px !important;
   position: relative !important;
   overflow: hidden !important;
 }
@@ -5248,7 +5248,7 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
   width: auto !important;
   height: auto !important;
   position: absolute !important;
-  top: 35% !important;
+  top: 50% !important;
   transform: translateY(-50%) !important;
   display: flex !important;
   align-items: center !important;

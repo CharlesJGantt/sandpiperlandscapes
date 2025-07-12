@@ -1,0 +1,30 @@
+uuid: 7d2f04b0-4994-4d6b-bf3f-9a3127d7158d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bf83d158-7878-4927-b444-72550966e9a8'
+  module:
+    - block_content
+    - system
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_blogcategoriesslider
+theme: sandpiper_landscapes
+region: hero_top
+weight: 0
+provider: null
+plugin: 'block_content:bf83d158-7878-4927-b444-72550966e9a8'
+settings:
+  id: 'block_content:bf83d158-7878-4927-b444-72550966e9a8'
+  label: 'Blog Categories Slider'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blog

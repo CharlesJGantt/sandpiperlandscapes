@@ -1,4 +1,4 @@
-uuid: 3b847e7d-0d5d-4fd2-8ed3-8f97e1b6ff31
+uuid: ca71f70a-8310-42e9-981f-a94cd4a733a1
 langcode: en
 status: true
 dependencies:
@@ -11,10 +11,10 @@ dependencies:
     - node
     - text
     - user
-id: front_page_blog_teasers
-label: 'Front Page Blog Teasers'
+id: blog_landing_page_elements
+label: 'Blog Landing Page Elements'
 module: views
-description: 'Displays a block of blog teasers for the homepage'
+description: 'Blog landing page sections with multiple block displays'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -25,7 +25,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Our Latest Blog Posts'
+      title: 'The Trimmed & True Blog'
       fields:
         field_teaser_image:
           id: field_teaser_image
@@ -56,28 +56,31 @@ display:
           label: ''
           type: text_default
           settings: {  }
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: field
+          label: ''
+          type: timestamp
+          settings:
+            date_format: custom
+            custom_date_format: 'F j, Y'
+            timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
       pager:
-        type: full
+        type: some
         options:
           offset: 0
-          pagination_heading_level: h4
-          items_per_page: 6
-          total_pages: null
-          id: 0
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
+          items_per_page: 5
       access:
         type: perm
         options:
@@ -91,11 +94,6 @@ display:
           field: created
           plugin_id: date
           order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
       filters:
         status:
           id: status
@@ -114,50 +112,82 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
-          default_row_class: false
+          row_class: spl-grid-row
+          default_row_class: true
       row:
         type: fields
         options: {  }
       query:
         type: views_query
-      use_ajax: true
+      use_ajax: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_blog_card_teaser'
         - 'config:field.storage.node.field_teaser_image'
-  block_1:
-    id: block_1
-    display_title: 'Front Page Blog Teasers'
+  featured_grid_block:
+    id: featured_grid_block
+    display_title: 'Featured Grid (1-5)'
     display_plugin: block
     position: 1
     display_options:
       defaults:
+        css_class: false
         pager: true
         style: true
         row: true
         fields: true
         sorts: true
         filters: true
-      display_description: ''
+      css_class: 'blog-landing-hero-section spl-featured-grid-layout'
+      display_description: 'Featured blog grid for positions 1-5'
       display_extenders: {  }
-      block_description: 'Blog teaser list for homepage'
-      block_category: Custom
-      label: 'Blog Teasers'
+      block_description: 'Blog Landing - Featured Grid (1-5)'
+      block_category: 'Blog Landing'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_blog_card_teaser'
+        - 'config:field.storage.node.field_teaser_image'
+  recent_blog_cards:
+    id: recent_blog_cards
+    display_title: 'Recent Blog Cards (6-11)'
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 5
+          items_per_page: 6
+      defaults:
+        css_class: false
+        pager: false
+        style: true
+        row: true
+        fields: true
+        sorts: true
+        filters: true
+      css_class: blog-landing-recent-section
+      display_extenders: {  }
+      block_description: 'Blog Landing - Recent Blog Cards (6-11)'
+      block_category: 'Blog Landing'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags:

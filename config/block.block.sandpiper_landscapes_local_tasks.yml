@@ -9,7 +9,7 @@ _core:
 id: sandpiper_landscapes_local_tasks
 theme: sandpiper_landscapes
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

@@ -1,0 +1,25 @@
+uuid: d05a2950-6cae-4aa4-ab91-dab15a5c5c6d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - layout_bg_article_teaser
+_core:
+  default_config_hash: W6FygdtWpd-R2ule7N2YvAZ0bBQi4raN2YaDgQHpB3E
+name: layout_bg_teaser
+label: 'Layout BG Teaser'
+effects:
+  d8403c98-c847-43d2-924b-06e466b885a7:
+    uuid: d8403c98-c847-43d2-924b-06e466b885a7
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 400
+      height: 400
+      anchor: center-center
+  9057991c-a0f0-45ab-9f4b-a118afa490c5:
+    uuid: 9057991c-a0f0-45ab-9f4b-a118afa490c5
+    id: image_desaturate
+    weight: -10
+    data: {  }

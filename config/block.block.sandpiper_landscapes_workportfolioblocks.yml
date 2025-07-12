@@ -1,0 +1,25 @@
+uuid: b4dfd763-47f0-4342-b174-9acc74530b36
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b8d977a0-c79e-432b-bbad-3280edd75a6b'
+  module:
+    - block_content
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_workportfolioblocks
+theme: sandpiper_landscapes
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b8d977a0-c79e-432b-bbad-3280edd75a6b'
+settings:
+  id: 'block_content:b8d977a0-c79e-432b-bbad-3280edd75a6b'
+  label: 'Work Portfolio Blocks'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

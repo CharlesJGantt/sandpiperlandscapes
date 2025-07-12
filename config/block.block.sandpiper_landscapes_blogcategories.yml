@@ -1,0 +1,25 @@
+uuid: 0b0c33d1-2772-492f-a54b-81c3507e1c15
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9c34edcd-2278-41c1-8c3b-3ed1b012f3a1'
+  module:
+    - block_content
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_blogcategories
+theme: sandpiper_landscapes
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:9c34edcd-2278-41c1-8c3b-3ed1b012f3a1'
+settings:
+  id: 'block_content:9c34edcd-2278-41c1-8c3b-3ed1b012f3a1'
+  label: 'Blog Categories Block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

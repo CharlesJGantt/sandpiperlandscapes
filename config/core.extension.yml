@@ -37,6 +37,7 @@ module:
   image: 0
   jquery_ui: 0
   layout_bg: 0
+  layout_bg_article_teaser: 0
   layout_bg_bricks: 0
   layout_builder: 0
   layout_builder_blocks: 0
@@ -61,7 +62,6 @@ module:
   path: 0
   path_alias: 0
   photoswipe: 0
-  responsive_menus: 0
   search: 0
   seo_checklist: 0
   system: 0

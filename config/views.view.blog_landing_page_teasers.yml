@@ -1,4 +1,4 @@
-uuid: 3b847e7d-0d5d-4fd2-8ed3-8f97e1b6ff31
+uuid: ca96e394-83d5-4360-90b5-8242f1bb3a2f
 langcode: en
 status: true
 dependencies:
@@ -11,8 +11,8 @@ dependencies:
     - node
     - text
     - user
-id: front_page_blog_teasers
-label: 'Front Page Blog Teasers'
+id: blog_landing_page_teasers
+label: 'Blog Landing Page Blog Teasers'
 module: views
 description: 'Displays a block of blog teasers for the homepage'
 tag: ''
@@ -59,9 +59,9 @@ display:
       pager:
         type: full
         options:
-          offset: 0
+          offset: 5
           pagination_heading_level: h4
-          items_per_page: 6
+          items_per_page: 12
           total_pages: null
           id: 0
           tags:
@@ -134,9 +134,9 @@ display:
       tags:
         - 'config:field.storage.node.field_blog_card_teaser'
         - 'config:field.storage.node.field_teaser_image'
-  block_1:
-    id: block_1
-    display_title: 'Front Page Blog Teasers'
+  block_21:
+    id: block_21
+    display_title: 'Blog Landing Page Blog Teasers'
     display_plugin: block
     position: 1
     display_options:
@@ -149,8 +149,8 @@ display:
         filters: true
       display_description: ''
       display_extenders: {  }
-      block_description: 'Blog teaser list for homepage'
-      block_category: Custom
+      block_description: 'Blog Landing Page Teasers'
+      block_category: 'Blog Landing'
       label: 'Blog Teasers'
     cache_metadata:
       max-age: -1

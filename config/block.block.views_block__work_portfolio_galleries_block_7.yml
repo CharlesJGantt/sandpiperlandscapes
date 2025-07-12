@@ -1,6 +1,6 @@
 uuid: 558abee7-3bd4-47da-8a36-829f147ba4e7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.work_portfolio_galleries
@@ -11,7 +11,7 @@ dependencies:
 id: views_block__work_portfolio_galleries_block_7
 theme: sandpiper_landscapes
 region: content
-weight: 0
+weight: 2
 provider: null
 plugin: 'views_block:work_portfolio_galleries-block_7'
 settings:

@@ -1,0 +1,16 @@
+uuid: 2e962b1d-3b30-4791-9915-33cc27672cf6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - layout_bg_article_teaser
+_core:
+  default_config_hash: gGxu7M94kg9lhwf-CVCTfXuwK4Vww80M4Hij3lYGiG8
+id: node.layout_bg_teaser
+label: 'Layout BG Teaser'
+description: ''
+targetEntityType: node
+cache: true
