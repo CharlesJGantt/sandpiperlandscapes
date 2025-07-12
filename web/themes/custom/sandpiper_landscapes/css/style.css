@@ -3003,6 +3003,43 @@ body.node--type-blog .splblog-subheading,
   }
 }
 
+.spl-additional-blogs-main-heading {
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  color: #2d5a27 !important;
+  text-align: center !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: 0.5px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-transform: none !important;
+}
+
+/* Enhanced specificity for different regions */
+.region-content-top .spl-additional-blogs-main-heading,
+.content-top .spl-additional-blogs-main-heading,
+.region-content .spl-additional-blogs-main-heading,
+.region-main .spl-additional-blogs-main-heading,
+#block-views-blog-landing-page-teasers-block-21 .spl-additional-blogs-main-heading {
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  color: #2d5a27 !important;
+  text-align: center !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: 0.5px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-transform: none !important;
+}
+
+
+
 
 /* Blog teaser card layout */
 .spl-blog-teaser-card {
@@ -3135,6 +3172,30 @@ body.node--type-blog .splblog-subheading,
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .spl-additional-blogs-main-heading,
+  .region-content-top .spl-additional-blogs-main-heading,
+  .content-top .spl-additional-blogs-main-heading,
+  .region-content .spl-additional-blogs-main-heading,
+  .region-main .spl-additional-blogs-main-heading {
+    font-size: 2.2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spl-additional-blogs-main-heading,
+  .region-content-top .spl-additional-blogs-main-heading,
+  .content-top .spl-additional-blogs-main-heading,
+  .region-content .spl-additional-blogs-main-heading,
+  .region-main .spl-additional-blogs-main-heading {
+    font-size: 1.8rem !important;
+    margin-top: 1rem !important;
+  }
 }
 
 
@@ -3614,6 +3675,68 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 }
 
 /* ===========================================
+   CONTENT-TOP SECTION PADDING OVERRIDE
+   Only applies to this specific page
+   =========================================== */
+
+/* Target the specific page by body class or page path */
+body.path-frontpage .content-top__section,
+body.path-node .content-top__section,
+body.page-node-type-page .content-top__section {
+  padding: 0px 0 !important;
+}
+
+/* Alternative: Target by the specific content-top container if it has unique classes */
+.clearfix.content-top.region--bright-background .content-top__section,
+.content-top.region--bright-background .content-top__section {
+  padding: 0px 0 !important;
+}
+
+/* Most specific: Target by the exact container structure visible in your DOM */
+.clearfix.content-top.region--bright-background .container .content-top__section {
+  padding: 0px 0 !important;
+}
+
+/* ===========================================
+   BLOG HERO GRID MAIN HEADING - SPL STYLING
+   Corrected spacing for proper positioning
+   =========================================== */
+
+   .spl-blog-hero-grid-main-heading {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    color: #2d5a27 !important;
+    text-align: center !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    text-transform: none !important;
+  }
+  
+  /* Enhanced specificity for different regions */
+  .region-content-top .spl-blog-hero-grid-main-heading,
+  .content-top .spl-blog-hero-grid-main-heading,
+  .region-content .spl-blog-hero-grid-main-heading,
+  #block-views-blog-landing-page-elements-featured-grid-block .spl-blog-hero-grid-main-heading {
+    font-family: "Nunito Sans", Arial, sans-serif !important;
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    color: #2d5a27 !important;
+    text-align: center !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    text-transform: none !important;
+  } 
+  
+/* ===========================================
  LEFT & RIGHT COLUMNS - SIDE TEASERS (30% each)
  =========================================== */
 
@@ -3902,6 +4025,28 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* ===========================================
    RESPONSIVE
    =========================================== */
+
+ /* Mobile responsive */
+ @media (max-width: 768px) {
+  .spl-blog-hero-grid-main-heading,
+  .region-content-top .spl-blog-hero-grid-main-heading,
+  .content-top .spl-blog-hero-grid-main-heading,
+  .region-content .spl-blog-hero-grid-main-heading {
+    font-size: 2.2rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spl-blog-hero-grid-main-heading,
+  .region-content-top .spl-blog-hero-grid-main-heading,
+  .content-top .spl-blog-hero-grid-main-heading,
+  .region-content .spl-blog-hero-grid-main-heading {
+    font-size: 1.8rem !important;
+    margin-top: 1rem !important;
+  }
+}
 
 /* Large Tablets */
 @media (max-width: 1024px) {
@@ -5083,8 +5228,8 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* Main carousel wrapper */
 .spl-blog-category-carousel-wrapper {
   max-width: 1200px !important;
-  margin: 2rem auto !important;
-  padding: 2rem !important;
+  margin: 1rem auto !important;
+  padding: 1rem !important;
   position: relative !important;
   width: 100% !important;
 }
@@ -5101,7 +5246,7 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* Inner carousel container */
 .spl-carousel-inner {
   padding: 2rem 1rem !important;
-  min-height: 200px !important;
+  min-height: 250px !important;
   position: relative !important;
   overflow: hidden !important;
 }
@@ -5234,8 +5379,13 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 /* ===========================================
    BLOG CATEGORY CAROUSEL - SPL STYLING
    Custom Chevron Arrow Positioning
+   ENHANCED FOR CONTENT-TOP REGION
    =========================================== */
 
+/* Enhanced specificity for content-top region */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control,
 .spl-blog-category-carousel-wrapper .carousel-control {
   background: none !important;
   border: none !important;
@@ -5257,11 +5407,17 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 }
 
 /* Left arrow inside the carousel */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control.left,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control.left,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control.left,
 .spl-blog-category-carousel-wrapper .carousel-control.left {
   left: 15px !important;
 }
 
 /* Right arrow just 5px past the last card */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control.right,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control.right,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control.right,
 .spl-blog-category-carousel-wrapper .carousel-control.right {
   right: auto !important;
   left: calc(100% - 3rem) !important;
@@ -5269,6 +5425,9 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 }
 
 /* Chevron icon itself */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control .glyphicon,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control .glyphicon,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control .glyphicon,
 .spl-blog-category-carousel-wrapper .carousel-control .glyphicon {
   font-size: 2.8rem !important;
   font-weight: bold !important;
@@ -5277,18 +5436,41 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 }
 
 /* Hover state */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control:hover .glyphicon,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control:hover .glyphicon,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control:hover .glyphicon,
 .spl-blog-category-carousel-wrapper .carousel-control:hover .glyphicon {
   color: #9acd32 !important;
 }
 
 /* Hide glyphicons from screen readers */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control .sr-only,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control .sr-only,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control .sr-only,
 .spl-blog-category-carousel-wrapper .carousel-control .sr-only {
   display: none !important;
 }
 
 /* Hide any existing FontAwesome arrow styling */
+.region-content-top .spl-blog-category-carousel-wrapper .carousel-control::before,
+.content-top .spl-blog-category-carousel-wrapper .carousel-control::before,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-control::before,
 .spl-blog-category-carousel-wrapper .carousel-control::before {
   display: none !important;
+}
+
+.region-content-top .spl-blog-category-carousel-heading,
+.content-top .spl-blog-category-carousel-heading,
+#block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-carousel-heading,
+.spl-blog-category-carousel-heading {
+  font-family: "Nunito Sans", Arial, sans-serif !important;
+  font-size: 2.8rem !important;
+  font-weight: 700 !important;
+  color: #2d5a27 !important;
+  text-align: center !important;
+  margin-top: -80px !important;
+  margin-bottom: 1.5rem !important;
+  letter-spacing: 0.5px !important;
 }
 
 /* Screen reader text */
@@ -5304,89 +5486,137 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
   border: 0 !important;
 }
 
-/* Indicators */
-.spl-carousel-indicators {
-  position: absolute !important;
-  bottom: -50px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  z-index: 15 !important;
+/* HIDE ALL CAROUSEL INDICATORS - COMPLETELY REMOVED */
+.region-content-top .spl-carousel-indicators,
+.content-top .spl-carousel-indicators,
+#block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-indicators,
+.spl-carousel-indicators,
+.region-content-top .carousel-indicators,
+.content-top .carousel-indicators,
+#block-sandpiper-landscapes-blogcategoriesslider .carousel-indicators,
+.carousel-indicators {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
-  list-style: none !important;
-  display: flex !important;
-  gap: 10px !important;
 }
-.spl-carousel-indicators li {
-  border: 2px solid #4a7c59 !important;
-  background-color: transparent !important;
-  width: 12px !important;
-  height: 12px !important;
-  border-radius: 50% !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-}
-.spl-carousel-indicators .spl-indicator-active,
-.spl-carousel-indicators li.active {
-  background-color: #4a7c59 !important;
-}
-.spl-carousel-indicators li:hover {
-  background-color: #9ACD32 !important;
-  border-color: #9ACD32 !important;
+
+/* Remove padding specifically for the blog categories slider */
+#block-sandpiper-landscapes-blogcategoriesslider .content-top__section,
+.region-content-top #block-sandpiper-landscapes-blogcategoriesslider {
+  padding-bottom: 0 !important;
 }
 
 /* === RESPONSIVE BREAKPOINTS === */
 @media (max-width: 900px) {
+  .region-content-top .spl-blog-category-slide-row,
+  .content-top .spl-blog-category-slide-row,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-slide-row,
   .spl-blog-category-slide-row {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.2rem !important;
     padding: 0 2rem !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper,
+  .content-top .spl-blog-category-carousel-wrapper,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-carousel-wrapper,
   .spl-blog-category-carousel-wrapper {
     padding: 1.5rem !important;
     max-width: 800px !important;
   }
+  
+  .region-content-top .spl-carousel-inner,
+  .content-top .spl-carousel-inner,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-inner,
   .spl-carousel-inner {
     min-height: 350px !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-title,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-title,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-title,
   .spl-blog-category-carousel-wrapper .spl-blog-category-title {
     font-size: 0.9rem !important;
   }
-  .spl-blog-category-carousel-wrapper .carousel-control.left {
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .carousel-control.left,
+  .content-top .spl-blog-category-carousel-wrapper .carousel-control.left,
+  #block-sandpiper-landscapes-blogcategoriesslider .carousel-control.left {
     left: 10px !important;
   }
-  .spl-blog-category-carousel-wrapper .carousel-control.right {
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .carousel-control.right,
+  .content-top .spl-blog-category-carousel-wrapper .carousel-control.right,
+  #block-sandpiper-landscapes-blogcategoriesslider .carousel-control.right {
     left: calc(100% - 2.5rem) !important;
     margin-left: 5px !important;
   }
 }
 
 @media (max-width: 768px) {
+  .region-content-top .spl-blog-category-slide-row,
+  .content-top .spl-blog-category-slide-row,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-slide-row,
   .spl-blog-category-slide-row {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
     padding: 0 1rem !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper,
+  .content-top .spl-blog-category-carousel-wrapper,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-carousel-wrapper,
   .spl-blog-category-carousel-wrapper {
     padding: 1rem !important;
     margin: 1rem auto !important;
     max-width: 100% !important;
   }
+  
+  .region-content-top .spl-carousel-inner,
+  .content-top .spl-carousel-inner,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-inner,
   .spl-carousel-inner {
     padding: 1.5rem 0.5rem !important;
     min-height: 300px !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-title,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-title,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-title,
   .spl-blog-category-carousel-wrapper .spl-blog-category-title {
     font-size: 0.85rem !important;
     line-height: 1.15 !important;
   }
-  .spl-carousel-indicators {
+  
+  /* Ensure indicators are hidden on mobile too */
+  .region-content-top .spl-carousel-indicators,
+  .content-top .spl-carousel-indicators,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-indicators,
+  .spl-carousel-indicators,
+  .region-content-top .carousel-indicators,
+  .content-top .carousel-indicators,
+  #block-sandpiper-landscapes-blogcategoriesslider .carousel-indicators,
+  .carousel-indicators {
     display: none !important;
   }
+  
+  .region-content-top .spl-carousel-arrow,
+  .content-top .spl-carousel-arrow,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-arrow,
   .spl-carousel-arrow {
     width: 50px !important;
     height: 50px !important;
   }
+  
+  .region-content-top .spl-carousel-arrow-left::before,
+  .region-content-top .spl-carousel-arrow-right::before,
+  .content-top .spl-carousel-arrow-left::before,
+  .content-top .spl-carousel-arrow-right::before,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-arrow-left::before,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-arrow-right::before,
   .spl-carousel-arrow-left::before,
   .spl-carousel-arrow-right::before {
     font-size: 1.2rem !important;
@@ -5394,39 +5624,81 @@ div.content .spl-portfolio-showcase .spl-portfolio-item-wrapper:hover,
 }
 
 @media (max-width: 480px) {
+  .region-content-top .spl-blog-category-carousel-wrapper,
+  .content-top .spl-blog-category-carousel-wrapper,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-carousel-wrapper,
   .spl-blog-category-carousel-wrapper {
     padding: 0.5rem !important;
   }
 }
 
 /* Accessibility */
+.region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:focus-within,
+.content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:focus-within,
+#block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-card:focus-within,
 .spl-blog-category-carousel-wrapper .spl-blog-category-card:focus-within {
   outline: 3px solid #9ACD32 !important;
   outline-offset: 2px !important;
 }
+
+.region-content-top .spl-carousel-control-left:focus,
+.region-content-top .spl-carousel-control-right:focus,
+.content-top .spl-carousel-control-left:focus,
+.content-top .spl-carousel-control-right:focus,
+#block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-control-left:focus,
+#block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-control-right:focus,
 .spl-carousel-control-left:focus,
 .spl-carousel-control-right:focus {
   outline: 3px solid #9ACD32 !important;
   outline-offset: 2px !important;
 }
+
 @media (prefers-contrast: high) {
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-card,
   .spl-blog-category-carousel-wrapper .spl-blog-category-card {
     border: 3px solid #000 !important;
   }
+  
+  .region-content-top .spl-carousel-arrow,
+  .content-top .spl-carousel-arrow,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-arrow,
   .spl-carousel-arrow {
     border: 2px solid #000 !important;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card,
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-image img,
+  .region-content-top .spl-carousel-arrow,
+  .region-content-top .spl-carousel-item,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-image img,
+  .content-top .spl-carousel-arrow,
+  .content-top .spl-carousel-item,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-card,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-image img,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-arrow,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-carousel-item,
   .spl-blog-category-carousel-wrapper .spl-blog-category-card,
   .spl-blog-category-carousel-wrapper .spl-blog-category-image img,
   .spl-carousel-arrow,
   .spl-carousel-item {
     transition: none !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-card:hover,
   .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover {
     transform: none !important;
   }
+  
+  .region-content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-image img,
+  .content-top .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-image img,
+  #block-sandpiper-landscapes-blogcategoriesslider .spl-blog-category-card:hover .spl-blog-category-image img,
   .spl-blog-category-carousel-wrapper .spl-blog-category-card:hover .spl-blog-category-image img {
     transform: none !important;
   }
