@@ -29,6 +29,7 @@
         "drupal/gin": "^4.0",
         "drupal/gin_lb": "^2.0@beta",
         "drupal/gin_toolbar": "^2.0",
+        "drupal/image_compare": "^1.0",
         "drupal/layout_bg": "^1.4",
         "drupal/layout_builder_blocks": "^1.1",
         "drupal/layout_builder_component_attributes": "^2.2",
