@@ -5,9 +5,11 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://SPL_Logo_Name_Site2026_0.png'
+  path: 'public://sandpiper-landscapes-logo-alt-2.png'
 favicon:
-  use_default: 1
+  use_default: 0
+  path: sites/default/files/favicon.ico
+  mimetype: image/vnd.microsoft.icon
 breadcrumb_separator: fa-angle-double-right
 scroll_to_top_display: 1
 scroll_to_top_icon: fa-angles-up

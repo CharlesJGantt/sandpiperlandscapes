@@ -12,7 +12,7 @@ dependencies:
 id: sandpiper_landscapes_servicescards
 theme: sandpiper_landscapes
 region: content
-weight: -1
+weight: -4
 provider: null
 plugin: 'block_content:c89d6a8d-975b-4fe9-aa2e-f309f63ffe3d'
 settings:

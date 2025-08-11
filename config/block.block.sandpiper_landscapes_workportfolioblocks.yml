@@ -11,7 +11,7 @@ dependencies:
 id: sandpiper_landscapes_workportfolioblocks
 theme: sandpiper_landscapes
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:b8d977a0-c79e-432b-bbad-3280edd75a6b'
 settings:

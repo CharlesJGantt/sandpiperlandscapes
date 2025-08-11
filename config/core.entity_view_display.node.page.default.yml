@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_image
+    - field.field.node.page.field_test
     - field.field.node.page.layout_builder__layout
     - image.style.wide
     - node.type.page
@@ -68,6 +69,23 @@ third_party_settings:
                 entity: layout_builder.entity
             weight: 2
             additional: {  }
+          29ffdd7a-4d3a-4e6d-873f-040b5812a974:
+            uuid: 29ffdd7a-4d3a-4e6d-873f-040b5812a974
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_test'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -93,6 +111,15 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: -1
+    region: content
+  field_test:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_image
+    - field.field.node.page.field_test
     - field.field.node.page.layout_builder__layout
     - image.style.medium
     - node.type.page
@@ -43,4 +44,5 @@ content:
     weight: 101
     region: content
 hidden:
+  field_test: true
   layout_builder__layout: true

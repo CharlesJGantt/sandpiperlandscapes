@@ -137,7 +137,9 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: '<none>'
       defaults:
+        title: false
         css_class: false
         pager: true
         style: true

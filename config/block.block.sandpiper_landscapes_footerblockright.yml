@@ -1,0 +1,25 @@
+uuid: a2eff73d-deea-4cbb-872c-723fe4e07299
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:16d1a41c-1af7-461b-bf7d-4ec017b5afb8'
+  module:
+    - block_content
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_footerblockright
+theme: sandpiper_landscapes
+region: footer_top_second
+weight: 0
+provider: null
+plugin: 'block_content:16d1a41c-1af7-461b-bf7d-4ec017b5afb8'
+settings:
+  id: 'block_content:16d1a41c-1af7-461b-bf7d-4ec017b5afb8'
+  label: 'Footer Block Right'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
