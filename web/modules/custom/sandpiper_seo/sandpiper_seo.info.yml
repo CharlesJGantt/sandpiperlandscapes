@@ -1,0 +1,5 @@
+name: Sandpiper SEO
+type: module
+description: SEO overrides for Sandpiper Landscapes (metatags on non-node routes).
+core_version_requirement: ^10
+package: Custom

@@ -1,0 +1,185 @@
+<?php
+
+/**
+ * @file
+ * SEO overrides for Sandpiper Landscapes.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function sandpiper_seo_page_attachments_alter(array &$attachments) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $request = \Drupal::request();
+
+  // Fix 1 Issue 4 & Fix 3 Issue 3: Canonical tags on paginated homepage/blog.
+  $page_param = $request->query->get('page');
+  if ($page_param !== NULL) {
+    $current_path = $request->getPathInfo();
+    // Homepage pagination.
+    if ($current_path === '/' || $current_path === '/home' || $route_name === 'entity.node.canonical') {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node) {
+        $nid = is_object($node) ? $node->id() : $node;
+        // Homepage (node 1).
+        if ($nid == 1) {
+          _sandpiper_seo_set_canonical($attachments, '/');
+          _sandpiper_seo_override_title_desc($attachments,
+            'Lawn Care & Landscaping Services in Aiken, SC | Sandpiper Landscapes',
+            'Locally owned lawn care and landscaping in Aiken, SC since 2017. Weekly mowing, mulch, cleanups, irrigation & more. Serving all of Aiken County. Get a free estimate.'
+          );
+        }
+        // Blog (node 52).
+        if ($nid == 52) {
+          _sandpiper_seo_set_canonical($attachments, '/blog');
+          _sandpiper_seo_override_title_desc($attachments,
+            NULL,
+            "Lawn care tips, landscaping guides, and seasonal advice from Sandpiper Landscapes \xe2\x80\x94 your local experts in Aiken and Aiken County, SC since 2017."
+          );
+        }
+      }
+    }
+  }
+
+  if ($route_name === 'contact.site_page') {
+    // Set meta description
+    $description = 'Contact Sandpiper Landscapes for lawn care in Aiken, SC. Request a free estimate or get on our schedule. Locally owned and serving Aiken County since 2017.';
+
+    // Remove any existing description meta tag
+    if (isset($attachments['#attached']['html_head'])) {
+      foreach ($attachments['#attached']['html_head'] as $key => $tag) {
+        if (isset($tag[0]['#attributes']['name']) && $tag[0]['#attributes']['name'] === 'description') {
+          unset($attachments['#attached']['html_head'][$key]);
+        }
+      }
+    }
+
+    // Add our description
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'description',
+          'content' => $description,
+        ],
+      ],
+      'contact_meta_description',
+    ];
+
+    // Set the title tag
+    $title = 'Contact Sandpiper Landscapes | Lawn Care in Aiken, SC';
+
+    // Remove existing title metatag if present
+    if (isset($attachments['#attached']['html_head'])) {
+      foreach ($attachments['#attached']['html_head'] as $key => $tag) {
+        if (isset($tag[1]) && ($tag[1] === 'title' || $tag[1] === 'metatag_title')) {
+          unset($attachments['#attached']['html_head'][$key]);
+        }
+      }
+    }
+
+    // Add title metatag
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'title',
+          'content' => $title,
+        ],
+      ],
+      'contact_meta_title',
+    ];
+  }
+}
+
+/**
+ * Helper: Set canonical link tag on the page.
+ */
+function _sandpiper_seo_set_canonical(array &$attachments, $path) {
+  $base_url = \Drupal::request()->getSchemeAndHttpHost();
+  // Remove any existing canonical.
+  if (isset($attachments['#attached']['html_head_link'])) {
+    foreach ($attachments['#attached']['html_head_link'] as $key => $link) {
+      if (isset($link[0]['rel']) && $link[0]['rel'] === 'canonical') {
+        unset($attachments['#attached']['html_head_link'][$key]);
+      }
+    }
+  }
+  if (isset($attachments['#attached']['html_head'])) {
+    foreach ($attachments['#attached']['html_head'] as $key => $tag) {
+      if (isset($tag[0]['#attributes']['rel']) && $tag[0]['#attributes']['rel'] === 'canonical') {
+        unset($attachments['#attached']['html_head'][$key]);
+      }
+    }
+  }
+  $attachments['#attached']['html_head_link'][] = [
+    ['rel' => 'canonical', 'href' => $base_url . $path],
+    TRUE,
+  ];
+}
+
+/**
+ * Helper: Override title and/or description meta tags.
+ */
+function _sandpiper_seo_override_title_desc(array &$attachments, $title = NULL, $description = NULL) {
+  if ($description) {
+    if (isset($attachments['#attached']['html_head'])) {
+      foreach ($attachments['#attached']['html_head'] as $key => $tag) {
+        if (isset($tag[0]['#attributes']['name']) && $tag[0]['#attributes']['name'] === 'description') {
+          unset($attachments['#attached']['html_head'][$key]);
+        }
+      }
+    }
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'description',
+          'content' => $description,
+        ],
+      ],
+      'sandpiper_seo_description',
+    ];
+  }
+}
+
+/**
+ * Implements hook_metatags_alter().
+ */
+function sandpiper_seo_metatags_alter(array &$metatags, array &$context) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'contact.site_page') {
+    $metatags['title'] = 'Contact Sandpiper Landscapes | Lawn Care in Aiken, SC';
+    $metatags['description'] = 'Contact Sandpiper Landscapes for lawn care in Aiken, SC. Request a free estimate or get on our schedule. Locally owned and serving Aiken County since 2017.';
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * Override the <title> tag for the contact page.
+ */
+function sandpiper_seo_preprocess_html(array &$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'contact.site_page') {
+    $variables['head_title'] = [
+      'title' => 'Contact Sandpiper Landscapes | Lawn Care in Aiken, SC',
+    ];
+  }
+
+  // Override title on paginated homepage variants.
+  $page_param = \Drupal::request()->query->get('page');
+  if ($page_param !== NULL && $route_name === 'entity.node.canonical') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node) {
+      $nid = is_object($node) ? $node->id() : $node;
+      if ($nid == 1) {
+        $variables['head_title'] = [
+          'title' => 'Lawn Care & Landscaping Services in Aiken, SC | Sandpiper Landscapes',
+        ];
+      }
+    }
+  }
+}

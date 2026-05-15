@@ -1,0 +1,21 @@
+uuid: 14b14282-50d7-43ca-8f9c-d66aa81247af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.front_page_hero_slider
+  module:
+    - metatag
+id: node.front_page_hero_slider.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: front_page_hero_slider
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

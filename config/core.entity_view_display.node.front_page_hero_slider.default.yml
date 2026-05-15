@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.front_page_hero_slider.body
     - field.field.node.front_page_hero_slider.field_image
     - field.field.node.front_page_hero_slider.field_link
+    - field.field.node.front_page_hero_slider.field_metatag
     - image.style.wide
     - node.type.front_page_hero_slider
   module:
@@ -53,4 +54,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_metatag: true

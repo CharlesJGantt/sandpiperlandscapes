@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.work_portfolio_image.body
+    - field.field.node.work_portfolio_image.field_metatag
     - field.field.node.work_portfolio_image.field_service_category
     - field.field.node.work_portfolio_image.field_work_image
     - field.field.node.work_portfolio_image.field_work_portfolio_hero_image
@@ -104,4 +105,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_metatag: true

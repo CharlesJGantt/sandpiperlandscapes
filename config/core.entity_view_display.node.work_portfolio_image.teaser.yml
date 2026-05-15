@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.work_portfolio_image.body
+    - field.field.node.work_portfolio_image.field_metatag
     - field.field.node.work_portfolio_image.field_service_category
     - field.field.node.work_portfolio_image.field_work_image
     - field.field.node.work_portfolio_image.field_work_portfolio_hero_image
@@ -31,6 +32,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_metatag: true
   field_service_category: true
   field_work_image: true
   field_work_portfolio_hero_image: true

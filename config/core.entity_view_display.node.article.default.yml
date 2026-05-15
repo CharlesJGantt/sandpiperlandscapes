@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_blog_category
     - field.field.node.article.field_blog_tags
     - field.field.node.article.field_image
+    - field.field.node.article.field_metatag
     - field.field.node.article.field_tags
     - field.field.node.article.field_teaser_image
     - image.style.wide
@@ -66,5 +67,6 @@ content:
 hidden:
   comment: true
   field_blog_card_teaser: true
+  field_metatag: true
   field_tags: true
   field_teaser_image: true

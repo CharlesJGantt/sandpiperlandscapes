@@ -1,0 +1,21 @@
+uuid: 667104d7-c53d-412a-8a20-66293a6607b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.work_portfolio_image
+  module:
+    - metatag
+id: node.work_portfolio_image.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: work_portfolio_image
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

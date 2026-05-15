@@ -1,0 +1,30 @@
+uuid: 3d9e617e-82ac-47f3-844b-b4fef4f44a6a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ac438b02-260a-43f3-905e-5b0272053d78'
+  module:
+    - block_content
+    - system
+  theme:
+    - sandpiper_landscapes
+id: sandpiper_landscapes_contact_body_content
+theme: sandpiper_landscapes
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:ac438b02-260a-43f3-905e-5b0272053d78'
+settings:
+  id: 'block_content:ac438b02-260a-43f3-905e-5b0272053d78'
+  label: 'Contact Page Body Content'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

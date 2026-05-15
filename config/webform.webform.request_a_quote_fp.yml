@@ -12,13 +12,12 @@ id: request_a_quote_fp
 title: 'Get A Free Quote'
 description: ''
 categories: {  }
-elements: |
+elements: |-
   form_card:
     '#type': container
     '#attributes':
       class:
         - fp-form-wrapper
-
     quote_wrapper:
       '#type': fieldset
       '#title': ''
@@ -28,12 +27,9 @@ elements: |
       '#wrapper_attributes':
         class:
           - fp-form-inner-wrapper
-
       form_title:
         '#type': markup
         '#markup': '<h2 class="fp-form-title">Get A Free Quote</h2>'
-        '#weight': -100
-
       name:
         '#type': webform_name
         '#title': Name
@@ -48,7 +44,6 @@ elements: |
         '#wrapper_attributes':
           class:
             - fp-form-group
-
       contact_info:
         '#type': container
         '#attributes':
@@ -74,7 +69,6 @@ elements: |
           '#wrapper_attributes':
             class:
               - fp-form-group
-
       service_address:
         '#type': webform_address
         '#title': 'Service Address'
@@ -89,7 +83,6 @@ elements: |
         '#wrapper_attributes':
           class:
             - fp-form-group
-
       service_request_type:
         '#type': select
         '#title': 'Service Request Type'
@@ -109,19 +102,18 @@ elements: |
         '#wrapper_attributes':
           class:
             - fp-form-group
-
     actions:
       '#type': webform_actions
       '#title': ''
       '#attributes':
         class:
           - fp-form-actions
-      submit:
-        '#type': submit
-        '#value': 'Get My Quote'
-        '#attributes':
-          class:
-            - fp-submit
+    submit:
+      '#type': submit
+      '#value': 'Get My Quote'
+      '#attributes':
+        class:
+          - fp-submit
 css: ''
 javascript: ''
 settings:
@@ -261,5 +253,3 @@ settings:
 access: {  }
 handlers: {  }
 variants: {  }
-results_disabled: 'false'
-ajax: 'false'
