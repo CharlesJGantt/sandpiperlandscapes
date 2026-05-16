@@ -9307,9 +9307,9 @@ main.spl-services-landing-page .spl-service-card:hover .spl-service-card-descrip
   }
 }
 
-/* === Scoped Footer Styling for #bsr-page-footer === */
+/* === Scoped Footer Styling for .bsr-page-footer === */
 
-#bsr-page-footer {
+.bsr-page-footer {
   background: #f6f7fb;
   padding: 3rem 2rem 1rem;
   font-size: 1.125rem; /* ≈ 18px */
@@ -9317,24 +9317,24 @@ main.spl-services-landing-page .spl-service-card:hover .spl-service-card-descrip
   font-family: inherit;
 }
 
-#bsr-page-footer .bsr-footer-main-links {
+.bsr-page-footer .bsr-footer-main-links {
   margin-bottom: 1.5rem;
 }
 
-#bsr-page-footer .bsr-footer-links h5 {
+.bsr-page-footer .bsr-footer-links h2 {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #222;
 }
 
-#bsr-page-footer .bsr-footer-links ul.list-group {
+.bsr-page-footer .bsr-footer-links ul.list-group {
   padding-left: 0;
   margin: 0;
   list-style: none;
 }
 
-#bsr-page-footer .bsr-footer-links li.list-group-item {
+.bsr-page-footer .bsr-footer-links li.list-group-item {
   background-color: transparent !important;
   border: none !important;
   padding: 0.35rem 0;
@@ -9343,37 +9343,37 @@ main.spl-services-landing-page .spl-service-card:hover .spl-service-card-descrip
   line-height: 1.6;
 }
 
-#bsr-page-footer .bsr-footer-links li.list-group-item a {
+.bsr-page-footer .bsr-footer-links li.list-group-item a {
   color: #2d5a27;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-#bsr-page-footer .bsr-footer-links li.list-group-item a:hover {
+.bsr-page-footer .bsr-footer-links li.list-group-item a:hover {
   color: #174d17;
   text-decoration: underline;
 }
 
-#bsr-page-footer .bsr-footer-links li.list-group-item:before {
+.bsr-page-footer .bsr-footer-links li.list-group-item:before {
   content: none;
 }
 
 /* Tighter spacing between columns */
-#bsr-page-footer .bsr-footer-main-links > div {
+.bsr-page-footer .bsr-footer-main-links > div {
   padding-right: 2rem;
 }
 
 /* Responsive stacking on smaller screens */
 @media (max-width: 767px) {
-  #bsr-page-footer .bsr-footer-main-links > div {
+  .bsr-page-footer .bsr-footer-main-links > div {
     margin-bottom: 2rem;
     padding-right: 0;
   }
 }
 
 /* Copyright bar styling */
-#bsr-page-footer .footer-bottom-bar {
+.bsr-page-footer .footer-bottom-bar {
   padding-top: 1.5rem;
   font-size: 0.9rem;
   color: #666;

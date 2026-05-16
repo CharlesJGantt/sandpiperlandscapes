@@ -391,7 +391,7 @@
 
     {# main-content #}
     {% block main_content %}
-      <div {% if main_content_id %}id="{{ main_content_id }}"{% endif %} class="clearfix main-content {{ main_content_background_color }} {{ main_content_separator }}">
+      <div id="{{ main_content_id|default('main-content') }}" role="main" class="clearfix main-content {{ main_content_background_color }} {{ main_content_separator }}">
         <div class="{{ main_content_layout_container }}">
           <div class="clearfix main-content__container">
             <div class="row">
@@ -940,7 +940,7 @@
           <div class="mt-search-icon">
             <i class="fas fa-search"></i>
           </div>
-          <input type="text" name="keys" class="mt-input" placeholder="Search...">
+          <input type="text" name="keys" class="mt-input" placeholder="Search..." aria-label="{% trans %}Search{% endtrans %}">
           <div class="mt-clear-icon">
             <span class="sr-only">{% trans %}Clear keys input element{% endtrans %}</span><i class="fas fa-times-circle"></i>
           </div>
