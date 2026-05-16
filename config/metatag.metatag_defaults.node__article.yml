@@ -15,3 +15,8 @@ tags:
   schema_article_author: 'a:4:{s:5:"@type";s:12:"Organization";s:3:"@id";s:46:"https://sandpiperlandscapes.com/#localbusiness";s:4:"name";s:24:"Sandpiper Landscapes LLC";s:3:"url";s:31:"https://sandpiperlandscapes.com";}'
   schema_article_publisher: 'a:5:{s:5:"@type";s:12:"Organization";s:3:"@id";s:46:"https://sandpiperlandscapes.com/#localbusiness";s:4:"name";s:24:"Sandpiper Landscapes LLC";s:3:"url";s:31:"https://sandpiperlandscapes.com";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:87:"https://sandpiperlandscapes.com/sites/default/files/sandpiper-landscapes-logo-alt-2.png";}}'
   schema_article_image: 'a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:36:"[node:field_teaser_image:entity:url]";}'
+  og_type: article
+  og_image: '[node:field_teaser_image:entity:url]'
+  twitter_cards_image: '[node:field_teaser_image:entity:url]'
+  article_published_time: '[node:created:html_datetime]'
+  article_modified_time: '[node:changed:html_datetime]'

@@ -25,3 +25,12 @@ tags:
   schema_web_page_id: '[current-page:url]#webpage'
   schema_web_page_in_language: en
   schema_web_page_publisher: 'a:5:{s:5:"@type";s:12:"Organization";s:3:"@id";s:46:"https://sandpiperlandscapes.com/#localbusiness";s:4:"name";s:24:"Sandpiper Landscapes LLC";s:3:"url";s:31:"https://sandpiperlandscapes.com";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:87:"https://sandpiperlandscapes.com/sites/default/files/sandpiper-landscapes-logo-alt-2.png";}}'
+  og_site_name: 'Sandpiper Landscapes LLC'
+  og_type: website
+  og_url: '[current-page:url]'
+  og_image: 'https://sandpiperlandscapes.com/sites/default/files/sandpiper-landscapes-logo-alt-2.png'
+  og_image_alt: 'Sandpiper Landscapes logo — lawn care and landscaping in Aiken, SC'
+  og_locale: en_US
+  twitter_cards_type: summary_large_image
+  twitter_cards_site: '@sandpiperlandscapes'
+  twitter_cards_image: 'https://sandpiperlandscapes.com/sites/default/files/sandpiper-landscapes-logo-alt-2.png'
