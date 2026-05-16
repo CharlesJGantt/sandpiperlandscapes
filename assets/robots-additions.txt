@@ -1,0 +1,3 @@
+
+# XML sitemap (production canonical URL)
+Sitemap: https://sandpiperlandscapes.com/sitemap.xml

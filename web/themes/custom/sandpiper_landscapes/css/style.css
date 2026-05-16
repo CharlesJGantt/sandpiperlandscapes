@@ -1,8 +1,19 @@
+/* Site branding: keep the logo centered with the slogan centered directly
+   beneath it. Scoped by the branding block ID so it cannot affect any
+   other region/block. */
+#block-sandpiper-landscapes-branding {
+    text-align: center;
+}
+#block-sandpiper-landscapes-branding > a {
+    display: inline-block;
+}
+
 .site-slogan {
     font-size: 20px;
     font-weight: 600;
     line-height: 150%;
     margin: 10px 0 10px 0;
+    text-align: center;
 }
 
 /* ===========================================

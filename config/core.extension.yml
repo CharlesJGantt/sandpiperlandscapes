@@ -68,8 +68,14 @@ module:
   photoswipe: 0
   responsive_image: 0
   sandpiper_seo: 0
+  schema_article: 0
+  schema_metatag: 0
+  schema_organization: 0
+  schema_service: 0
+  schema_web_page: 0
   search: 0
   seo_checklist: 0
+  simple_sitemap: 0
   system: 0
   taxonomy: 0
   taxonomy_manager: 0

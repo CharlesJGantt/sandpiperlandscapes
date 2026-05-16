@@ -42,7 +42,9 @@
         "drupal/pathauto": "^1.13",
         "drupal/photoswipe": "^5.0",
         "drupal/responsive_menus": "^2.0@beta",
+        "drupal/schema_metatag": "^3.0",
         "drupal/seo_checklist": "^5.2",
+        "drupal/simple_sitemap": "^4.2",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/twbstools": "^2.1",
         "drupal/vvjs": "^1.0",
@@ -68,6 +70,11 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": {
+                    "append": "assets/robots-additions.txt"
+                }
             }
         },
         "installer-paths": {

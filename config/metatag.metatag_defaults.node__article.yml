@@ -1,0 +1,17 @@
+uuid: 9f237350-40fb-4720-80be-53b151ed8c31
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  schema_article_type: BlogPosting
+  schema_article_headline: '[node:title]'
+  schema_article_description: '[node:field_blog_card_teaser]'
+  schema_article_date_published: '[node:created:html_datetime]'
+  schema_article_date_modified: '[node:changed:html_datetime]'
+  schema_article_main_entity_of_page: '[current-page:url]'
+  schema_article_id: '[current-page:url]#article'
+  schema_article_author: 'a:4:{s:5:"@type";s:12:"Organization";s:3:"@id";s:46:"https://sandpiperlandscapes.com/#localbusiness";s:4:"name";s:24:"Sandpiper Landscapes LLC";s:3:"url";s:31:"https://sandpiperlandscapes.com";}'
+  schema_article_publisher: 'a:5:{s:5:"@type";s:12:"Organization";s:3:"@id";s:46:"https://sandpiperlandscapes.com/#localbusiness";s:4:"name";s:24:"Sandpiper Landscapes LLC";s:3:"url";s:31:"https://sandpiperlandscapes.com";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:87:"https://sandpiperlandscapes.com/sites/default/files/sandpiper-landscapes-logo-alt-2.png";}}'
+  schema_article_image: 'a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:36:"[node:field_teaser_image:entity:url]";}'
