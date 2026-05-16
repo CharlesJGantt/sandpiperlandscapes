@@ -23,4 +23,8 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/home"
+    pages: |-
+      <front>
+      /home
+      /services
+      /services/*

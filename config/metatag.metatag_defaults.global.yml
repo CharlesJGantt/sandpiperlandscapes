@@ -19,7 +19,7 @@ tags:
   schema_organization_telephone: +1-803-439-8943
   schema_organization_price_range: $55+
   schema_organization_address: 'a:4:{s:5:"@type";s:13:"PostalAddress";s:15:"addressLocality";s:5:"Aiken";s:13:"addressRegion";s:2:"SC";s:14:"addressCountry";s:2:"US";}'
-  schema_organization_opening_hours_specification: 'a:4:{s:5:"@type";s:25:"OpeningHoursSpecification";s:9:"dayOfWeek";a:5:{i:0;s:6:"Monday";i:1;s:7:"Tuesday";i:2;s:9:"Wednesday";i:3;s:8:"Thursday";i:4;s:6:"Friday";}s:5:"opens";s:5:"09:00";s:6:"closes";s:5:"17:00";}'
+  schema_organization_opening_hours_specification: 'a:4:{s:5:"@type";s:25:"OpeningHoursSpecification";s:9:"dayOfWeek";a:6:{i:0;s:6:"Monday";i:1;s:7:"Tuesday";i:2;s:9:"Wednesday";i:3;s:8:"Thursday";i:4;s:6:"Friday";i:5;s:8:"Saturday";}s:5:"opens";s:5:"07:00";s:6:"closes";s:5:"18:00";}'
   schema_organization_same_as: 'https://facebook.com/sandpiperlandscapes, https://instagram.com/sandpiperlandscapes, https://youtube.com/@sandpiperlandscapes, https://www.google.com/maps?cid=4099941553011125489'
   schema_web_page_type: WebPage
   schema_web_page_id: '[current-page:url]#webpage'

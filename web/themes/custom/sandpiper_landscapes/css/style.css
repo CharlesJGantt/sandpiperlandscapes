@@ -9381,3 +9381,39 @@ main.spl-services-landing-page .spl-service-card:hover .spl-service-card-descrip
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
 }
+
+/* PL4: homepage hero — keyword H1 (small, real, visible) + the seasonal CTA
+   line demoted from <h1> to <p class="hero-headline"> keeping its big look.
+   .hero-title .hero-h1-seo (2 classes) outranks .hero-title h1 (class+el). */
+.hero-title .hero-headline {
+    font-family: 'Nunito Sans' !important;
+    font-weight: 600;
+    font-size: 8.2rem;
+    line-height: 1.2;
+    margin: 0;
+    color: #226005;
+    max-width: 55%;
+}
+.hero-title .hero-h1-seo {
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 0 0.6rem 0;
+    color: #226005;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .hero-title .hero-headline {
+        font-size: 2.5rem;
+        max-width: 100%;
+        text-align: center;
+        line-height: 1.1;
+    }
+    .hero-title .hero-h1-seo {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
