@@ -1,0 +1,5 @@
+name: 'Sandpiper SEO Helpers'
+type: module
+description: 'Small SEO/accessibility output helpers for Sandpiper Landscapes.'
+package: SEO
+core_version_requirement: ^10 || ^11
